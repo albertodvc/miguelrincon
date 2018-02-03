@@ -28,6 +28,10 @@ module.exports = {
   router: {
     base: '/miguelrincon/'
   },
+  env: {
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
+  },
   build: {
     /*
     ** Run ESLint on save
@@ -40,12 +44,6 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-        config.plugins.push(
-          new webpack.DefinePlugin({
-            'process.env.CTF_SPACE_ID': JSON.stringify(process.env.CTF_SPACE_ID),
-            'process.env.CTF_CDA_ACCESS_TOKEN': JSON.stringify(process.env.CTF_CDA_ACCESS_TOKEN)
-          })
-        )
       }
     }
   }
