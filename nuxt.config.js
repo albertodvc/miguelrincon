@@ -22,6 +22,9 @@ module.exports = {
   /*
   ** Build configuration
   */
+  generate: {
+    dir: 'docs'
+  },
   build: {
     /*
     ** Run ESLint on save
