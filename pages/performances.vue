@@ -1,23 +1,29 @@
 <template>
   <section class="container">
     <ul>
-      <li v-for="perfo in perfoes" v-bind:key="perfo.id">{{perfo.fields.date}} - {{perfo.fields.group.fields.name}}</li>
+      <perfo-list :perfoes="perfoes"/>
     </ul>
   </section>
 </template>
 
 <script>
 import {createClient} from '../lib/contentful.js'
+import perfoMap from '../utils/perfoMap.js'
+import PerfoList from '../components/perfoes/perfoList/PerfoList.vue'
+
 const API = createClient()
 
 export default {
+  components: {
+    PerfoList
+  },
   asyncData: async () => {
     const { items } = await API.getEntries({
       'content_type': 'performance',
       include: 3
     })
     return {
-      perfoes: items
+      perfoes: items.map(perfoMap)
     }
   }
 }

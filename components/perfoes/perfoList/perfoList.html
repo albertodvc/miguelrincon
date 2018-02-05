@@ -1,0 +1,22 @@
+<ul class="perfo-list">
+  <li class="perfo-list__year"
+    v-for="year in dates"
+    :key="year.year">
+    <p class="perfo-list__year-label">{{ year.year }}</p>
+    <ul class="perfo-list__months">
+      <li class="perfo-list__month"
+        v-for="month in year.months"
+        :key="year.year+month.month">
+        <p class="perfo-list__month-label">{{ month.month }}</p>
+        <ul class="perfo-list__perfoes">
+          <li class="perfo-list__perfo"
+            v-for="perfo in month.perfoes"
+            :key="perfo._id">
+            <perfo class="perfo-list__perfo__component"
+              :perfo="perfo"/>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
