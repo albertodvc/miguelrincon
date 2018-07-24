@@ -23,28 +23,16 @@ module.exports = {
   ** Build configuration
   */
   generate: {
-    dir: 'docs'
+    dir: 'dist'
+    //dir: '/Users/nano/tmp/dist'
   },
   router: {
     base: '/miguelrincon/'
   },
   env: {
-    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
+    CTF_SPACE_ID: "wq03v81twbog",//process.env.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: "b5939dc4dd96813e43c64eefd0743a2b273b7ad94d449d4621183823ab897f65"//process.env.CTF_CDA_ACCESS_TOKEN
   },
-  build: {
-    /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
+  buildDir: 'tmp',
+  //buildDir: '/Users/nano/tmp/build',
 }
