@@ -26,9 +26,9 @@ module.exports = {
     dir: 'dist'
     //dir: '/Users/nano/tmp/dist'
   },
-  router: {
-    base: '/miguelrincon/'
-  },
+  // router: {
+  //   base: '/miguelrincon/'
+  // },
   env: {
     CTF_SPACE_ID: "wq03v81twbog",//process.env.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: "b5939dc4dd96813e43c64eefd0743a2b273b7ad94d449d4621183823ab897f65"//process.env.CTF_CDA_ACCESS_TOKEN
