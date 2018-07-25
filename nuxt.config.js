@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 
+console.log("init", process.env.CTF_SPACE_ID)
+
 module.exports = {
   /*
   ** Headers of the page
@@ -22,16 +24,20 @@ module.exports = {
   /*
   ** Build configuration
   */
+  router: {
+    middleware: 'i18n'
+  },
+  plugins: ['~/plugins/i18n.js'],
   generate: {
-    dir: 'dist'
-    //dir: '/Users/nano/tmp/dist'
+    dir: 'dist',
+    routes: ['/', '/performances', '/es-ES', '/es-ES/performances']
   },
   // router: {
   //   base: '/miguelrincon/'
   // },
   env: {
-    CTF_SPACE_ID: "wq03v81twbog",//process.env.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: "b5939dc4dd96813e43c64eefd0743a2b273b7ad94d449d4621183823ab897f65"//process.env.CTF_CDA_ACCESS_TOKEN
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
   },
   buildDir: 'tmp',
   //buildDir: '/Users/nano/tmp/build',
