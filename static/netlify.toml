@@ -1,5 +1,4 @@
 [[redirects]]
-  from = "/"
   to = "/es-ES"
   status = 302
   force = false
