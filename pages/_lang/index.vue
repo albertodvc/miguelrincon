@@ -75,7 +75,6 @@
           locale: store.state.locale,
           include: 3
         })
-        console.log("yai", items)
         return {
           perfoes: items.map(perfoMap)
         }
