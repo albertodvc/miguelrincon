@@ -73,8 +73,11 @@
         const { items } = await API.getEntries({
           'content_type': 'performance',
           locale: store.state.locale,
+          order: 'fields.date',
+          'fields.date[gte]': new Date(),
           include: 3
         })
+        console.log('lositems', items);
         return {
           perfoes: items.map(perfoMap)
         }
