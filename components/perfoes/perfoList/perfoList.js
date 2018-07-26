@@ -1,5 +1,5 @@
 import Perfo from '../perfo/Perfo.vue'
-import EventsToCalendar from '../../../utils/eventsToCalendar.js'
+import EventsToCalendar from '~/utils/eventsToCalendar.js'
 
 export default {
   components: {

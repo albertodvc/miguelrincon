@@ -1,5 +1,5 @@
 
-import getCalendarDay from '../../../utils/getCalendarDay'
+import getCalendarDay from '~/utils/getCalendarDay'
 
 export default {
   props: ['perfo'],

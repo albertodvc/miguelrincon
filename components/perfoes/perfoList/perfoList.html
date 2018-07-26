@@ -7,7 +7,7 @@
       <li class="perfo-list__month"
         v-for="month in year.months"
         :key="year.year+month.month">
-        <p class="perfo-list__month-label">{{ month.month }}</p>
+        <p class="perfo-list__month-label">{{ $t('dates.months.'+month.month) }}</p>
         <ul class="perfo-list__perfoes">
           <li class="perfo-list__perfo"
             v-for="perfo in month.perfoes"
