@@ -1,0 +1,42 @@
+{
+  "name": "Location",
+  "fields": [
+      {
+        "name": "Location",
+        "id": "loc",
+        "type": "Location"
+      },
+      {
+        "name": "Country",
+        "id": "country",
+        "type": "Symbol",
+        "localized": true,
+        "required": true
+      },
+      {
+        "name": "Address",
+        "id": "address",
+        "type": "Symbol",
+        "localized": true
+      },
+      {
+        "name": "Region",
+        "id": "region",
+        "type": "Symbol",
+        "localized": true
+      },
+      {
+        "name": "Sub_region",
+        "id": "sub_region",
+        "type": "Symbol",
+        "localized": true
+      },
+      {
+        "name": "City",
+        "id": "city",
+        "type": "Symbol",
+        "localized": true,
+        "required": true
+      }
+  ]
+}

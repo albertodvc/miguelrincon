@@ -10,7 +10,7 @@
         {{ $t('index.pilla') }} {{$store.locale}}
       </h2>
       <div class="links">
-        <nuxt-link class="button--green" to="/performances">About</nuxt-link>
+        <nuxt-link class="button--green" to="/es-ES">About</nuxt-link>
       </div>
     </div>
   </section>
