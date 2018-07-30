@@ -8,7 +8,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "3IHVikZY7e8KYaC2GEAW62"
+        "location_id": "3IHVikZY7e8KYaC2GEAW62",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "20zV5RD3I0maAMI82AGqu2"
     },
     {
         "id": "7",
@@ -19,7 +21,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "5R91vuXaqA84cgyyYWo40I"
+        "location_id": "5R91vuXaqA84cgyyYWo40I",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "9",
@@ -30,7 +34,9 @@
         "visible": "0",
         "place": "La Grange au Lac",
         "info": null,
-        "location_id": "1oEGnaRRxOUWsMOi8mYwYc"
+        "location_id": "1oEGnaRRxOUWsMOi8mYwYc",
+        "group_id": "2K7fgh7984qmgQAsKCOkck",
+        "program_id": "5zSvRPAyJycA6s8UAsAWqm"
     },
     {
         "id": "10",
@@ -41,7 +47,9 @@
         "visible": "0",
         "place": "Collégiale de Saint-Imier",
         "info": "",
-        "location_id": "2nbNJbP4KUaAksgoK2iqkY"
+        "location_id": "2nbNJbP4KUaAksgoK2iqkY",
+        "group_id": "4DQLnjUPrGsWwMEEEgw4cK",
+        "program_id": "4ctciaYJxeWq2ssEsSOeao"
     },
     {
         "id": "12",
@@ -52,7 +60,9 @@
         "visible": "0",
         "place": "Collégiale de Neuchâtel",
         "info": null,
-        "location_id": "5HTVSegVDaci6YQEUQwqCU"
+        "location_id": "5HTVSegVDaci6YQEUQwqCU",
+        "group_id": "4DQLnjUPrGsWwMEEEgw4cK",
+        "program_id": "4ctciaYJxeWq2ssEsSOeao"
     },
     {
         "id": "13",
@@ -63,7 +73,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "5qgnFf3l8AY0uwWoMYykyy"
+        "location_id": "5qgnFf3l8AY0uwWoMYykyy",
+        "group_id": "4DQLnjUPrGsWwMEEEgw4cK",
+        "program_id": "4ctciaYJxeWq2ssEsSOeao"
     },
     {
         "id": "14",
@@ -74,7 +86,9 @@
         "visible": "0",
         "place": "Atrium du Gymnase de Morges",
         "info": null,
-        "location_id": "4YXdL1ZQGAiw2uck2ueu20"
+        "location_id": "4YXdL1ZQGAiw2uck2ueu20",
+        "group_id": "4JovHIRJPOGuMgeQm62s6Q",
+        "program_id": "4zOpLDOFmUC4UeCSs4MyGY"
     },
     {
         "id": "15",
@@ -85,7 +99,9 @@
         "visible": "0",
         "place": "Atrium du Gymnase de Morges",
         "info": null,
-        "location_id": "5VpjiCEjE4M6Yi0Cg64s6q"
+        "location_id": "5VpjiCEjE4M6Yi0Cg64s6q",
+        "group_id": "4JovHIRJPOGuMgeQm62s6Q",
+        "program_id": "4zOpLDOFmUC4UeCSs4MyGY"
     },
     {
         "id": "16",
@@ -96,7 +112,9 @@
         "visible": "0",
         "place": "Atrium du Gymnase de Morges",
         "info": null,
-        "location_id": "7d5E60BkKAiMmgmMiSO62c"
+        "location_id": "7d5E60BkKAiMmgmMiSO62c",
+        "group_id": "4JovHIRJPOGuMgeQm62s6Q",
+        "program_id": "4zOpLDOFmUC4UeCSs4MyGY"
     },
     {
         "id": "17",
@@ -107,7 +125,9 @@
         "visible": "0",
         "place": "Atrium du Gymnase de Morges",
         "info": null,
-        "location_id": "2ULbM96rRu0Ug4ismu4CIo"
+        "location_id": "2ULbM96rRu0Ug4ismu4CIo",
+        "group_id": "4JovHIRJPOGuMgeQm62s6Q",
+        "program_id": "4zOpLDOFmUC4UeCSs4MyGY"
     },
     {
         "id": "19",
@@ -118,7 +138,9 @@
         "visible": "0",
         "place": "Teatro del la Maestranza",
         "info": "Singer: Roberta Invernizzi",
-        "location_id": "2ZxkU0arSgWw0We0qo2Kiy"
+        "location_id": "2ZxkU0arSgWw0We0qo2Kiy",
+        "group_id": "1TYNok8BxO8OIcWwgq2CWM",
+        "program_id": "7uvp6f037iWwq2eWWcuY84"
     },
     {
         "id": "20",
@@ -129,7 +151,9 @@
         "visible": "0",
         "place": "Französischen Kirche, Ber",
         "info": null,
-        "location_id": "1iLbCQV66yaYUOsQqkSkoi"
+        "location_id": "1iLbCQV66yaYUOsQqkSkoi",
+        "group_id": "6DbRusqQrmQiawmm2oQMaI",
+        "program_id": "5W49ye27F6YeoOWGUyWyq4"
     },
     {
         "id": "21",
@@ -140,7 +164,9 @@
         "visible": "0",
         "place": "Oberstrass",
         "info": null,
-        "location_id": "1URyWvnFlO6ceykoqm40Gi"
+        "location_id": "1URyWvnFlO6ceykoqm40Gi",
+        "group_id": "6DbRusqQrmQiawmm2oQMaI",
+        "program_id": "5W49ye27F6YeoOWGUyWyq4"
     },
     {
         "id": "22",
@@ -151,7 +177,9 @@
         "visible": "0",
         "place": "Martinskirche",
         "info": null,
-        "location_id": "2fhW5yFGiE6wWuiqK80OCU"
+        "location_id": "2fhW5yFGiE6wWuiqK80OCU",
+        "group_id": "6DbRusqQrmQiawmm2oQMaI",
+        "program_id": "5W49ye27F6YeoOWGUyWyq4"
     },
     {
         "id": "25",
@@ -162,7 +190,9 @@
         "visible": "0",
         "place": "Staatstheater",
         "info": null,
-        "location_id": "4UKC76vWD6mysQewISCY0Q"
+        "location_id": "4UKC76vWD6mysQewISCY0Q",
+        "group_id": "1RcJPPlZsw46UeoUIM8au4",
+        "program_id": "3s38ja1GLYW2oWI8yI2YYw"
     },
     {
         "id": "27",
@@ -173,7 +203,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "4B9s1ZplgAWKCC4YokA2wQ"
+        "location_id": "4B9s1ZplgAWKCC4YokA2wQ",
+        "group_id": "1vEIsollP6oEsWOWMaK0UC",
+        "program_id": "4kJBdac10A8cwiOK8ik2G6"
     },
     {
         "id": "28",
@@ -184,7 +216,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "693rNkKtpuoYyUmCUwaCUk"
+        "location_id": "693rNkKtpuoYyUmCUwaCUk",
+        "group_id": "1vEIsollP6oEsWOWMaK0UC",
+        "program_id": "4kJBdac10A8cwiOK8ik2G6"
     },
     {
         "id": "30",
@@ -195,7 +229,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "2YHIjmxAgMMSWuMeASaoMy"
+        "location_id": "2YHIjmxAgMMSWuMeASaoMy",
+        "group_id": "1vEIsollP6oEsWOWMaK0UC",
+        "program_id": "4kJBdac10A8cwiOK8ik2G6"
     },
     {
         "id": "31",
@@ -206,7 +242,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "4zierWeD9YMcoaiISw02I0"
+        "location_id": "4zierWeD9YMcoaiISw02I0",
+        "group_id": "2K7fgh7984qmgQAsKCOkck",
+        "program_id": "5zSvRPAyJycA6s8UAsAWqm"
     },
     {
         "id": "32",
@@ -217,7 +255,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "3hLRF0DePSy4CYoeWmGwYA"
+        "location_id": "3hLRF0DePSy4CYoeWmGwYA",
+        "group_id": "2K7fgh7984qmgQAsKCOkck",
+        "program_id": "5zSvRPAyJycA6s8UAsAWqm"
     },
     {
         "id": "33",
@@ -228,7 +268,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "4zLKhLMSNOO6ss8ykmwAIa"
+        "location_id": "4zLKhLMSNOO6ss8ykmwAIa",
+        "group_id": "2K7fgh7984qmgQAsKCOkck",
+        "program_id": "5zSvRPAyJycA6s8UAsAWqm"
     },
     {
         "id": "34",
@@ -239,7 +281,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "1Rzrk7yFfOMkkeG2w2MeOi"
+        "location_id": "1Rzrk7yFfOMkkeG2w2MeOi",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "35",
@@ -250,7 +294,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "6JSPKyNCQoYsQiEKaoWIWm"
+        "location_id": "6JSPKyNCQoYsQiEKaoWIWm",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "36",
@@ -261,7 +307,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "41cNrW5Jyo6Q2mK44USIuu"
+        "location_id": "41cNrW5Jyo6Q2mK44USIuu",
+        "group_id": "6DbRusqQrmQiawmm2oQMaI",
+        "program_id": "15FrWWrOhAAI0QC0MeWwIG"
     },
     {
         "id": "37",
@@ -272,7 +320,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "5saFPRzmhia6mIKYCaUQ0a"
+        "location_id": "5saFPRzmhia6mIKYCaUQ0a",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "38",
@@ -283,7 +333,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "2tjZ5RjcjWQc4GUY8uCqkO"
+        "location_id": "2tjZ5RjcjWQc4GUY8uCqkO",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "39",
@@ -294,7 +346,9 @@
         "visible": "0",
         "place": "Patio de los Reales Alcázeres",
         "info": null,
-        "location_id": "19dvTKqccMKaKgkEWCakaa"
+        "location_id": "19dvTKqccMKaKgkEWCakaa",
+        "group_id": "4y8UOGrdIA8UMi4OkgKG28",
+        "program_id": "6yBOmtwtXyuIC2WOicGe8y"
     },
     {
         "id": "40",
@@ -305,7 +359,9 @@
         "visible": "0",
         "place": "Eglise de St. Michel",
         "info": null,
-        "location_id": "2kdCZL3VqcCsUcSiY2yKwe"
+        "location_id": "2kdCZL3VqcCsUcSiY2yKwe",
+        "group_id": "1WmkTSeVIE4MEg60sWAa08",
+        "program_id": "2CZ35hlPgg4S4akEMU8Ukq"
     },
     {
         "id": "41",
@@ -316,7 +372,9 @@
         "visible": "0",
         "place": "Cour du Palais",
         "info": null,
-        "location_id": "1YJuBP82b28ig22gy0uqsU"
+        "location_id": "1YJuBP82b28ig22gy0uqsU",
+        "group_id": "6mlRYg2sO4cGcGgwIkke44",
+        "program_id": "6XnTR6QiSkI6qg2YOOCWCa"
     },
     {
         "id": "42",
@@ -327,7 +385,9 @@
         "visible": "0",
         "place": null,
         "info": "Singer: Núria Rial",
-        "location_id": "Au5ReFIgq4IKeckWeg4Aa"
+        "location_id": "Au5ReFIgq4IKeckWeg4Aa",
+        "group_id": "2K7fgh7984qmgQAsKCOkck",
+        "program_id": "1opuTmjPKc6GaQq8YuA4iw"
     },
     {
         "id": "44",
@@ -338,7 +398,9 @@
         "visible": "0",
         "place": "Auditorio Nacional de Música",
         "info": "Singer: Núria Rial",
-        "location_id": "1VTr2cOM9eqO0KGKGcGeWk"
+        "location_id": "1VTr2cOM9eqO0KGKGcGeWk",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "45",
@@ -349,7 +411,9 @@
         "visible": "0",
         "place": "Auditorio Fonseca",
         "info": "Singer: Núria Rial",
-        "location_id": "69V5TvWixGmUgOSEqw8WCw"
+        "location_id": "69V5TvWixGmUgOSEqw8WCw",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "46",
@@ -360,7 +424,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "1DbjDc46BmaE06UAIcEcs2"
+        "location_id": "1DbjDc46BmaE06UAIcEcs2",
+        "group_id": "2efeRGYG3Gq6cEEQqOuCae",
+        "program_id": "1EEnOnnm5W0s6oQq6QE6eO"
     },
     {
         "id": "47",
@@ -371,7 +437,9 @@
         "visible": "0",
         "place": "Église Villamont",
         "info": null,
-        "location_id": "18H0t5oiesKk4cswKCmiG"
+        "location_id": "18H0t5oiesKk4cswKCmiG",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "2nqAXwthF6uoW44mcsKI4i"
     },
     {
         "id": "48",
@@ -382,7 +450,9 @@
         "visible": "0",
         "place": "Auditori de Barcelona",
         "info": null,
-        "location_id": "332OC52a2IsE8MyIYeYYwW"
+        "location_id": "332OC52a2IsE8MyIYeYYwW",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4gvI7A9Sc86yuKoAUOCGSo"
     },
     {
         "id": "49",
@@ -393,7 +463,9 @@
         "visible": "0",
         "place": "Auditorio Príncipe Felipe de Oviedo",
         "info": "Singer: Núria Rial",
-        "location_id": "5TxXhzHYOs2ce8eygq44yk"
+        "location_id": "5TxXhzHYOs2ce8eygq44yk",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "50",
@@ -404,7 +476,9 @@
         "visible": "0",
         "place": "Wigmore Hall",
         "info": null,
-        "location_id": "3DltpoB3J6u8uCk6IKU8us"
+        "location_id": "3DltpoB3J6u8uCk6IKU8us",
+        "group_id": "2K7fgh7984qmgQAsKCOkck",
+        "program_id": "2njzutrUHmICiW4cS8kE8c"
     },
     {
         "id": "51",
@@ -415,7 +489,9 @@
         "visible": "0",
         "place": null,
         "info": "Singer: Philippe Jaroussky",
-        "location_id": "14UY6fPm2sgMKWuAs40KEg"
+        "location_id": "14UY6fPm2sgMKWuAs40KEg",
+        "group_id": "UuAawefd6K6IMwYO0kIem",
+        "program_id": "6mlfgfnEGImWUOAAMSSaQM"
     },
     {
         "id": "52",
@@ -426,7 +502,9 @@
         "visible": "0",
         "place": "Sala Joaquín Turina",
         "info": "Lute: Miguel Rincón",
-        "location_id": "3bUBP4dyhiCIuYawAYgkqg"
+        "location_id": "3bUBP4dyhiCIuYawAYgkqg",
+        "group_id": "1TYNok8BxO8OIcWwgq2CWM",
+        "program_id": "4mrZx5tKFaGcsEkYoIoUEG"
     },
     {
         "id": "53",
@@ -437,7 +515,9 @@
         "visible": "0",
         "place": "Sala Joaquín Turina",
         "info": "Lute: Miguel Rincón",
-        "location_id": "3vHh2R7opGyS8i2wymAKk4"
+        "location_id": "3vHh2R7opGyS8i2wymAKk4",
+        "group_id": "1TYNok8BxO8OIcWwgq2CWM",
+        "program_id": "4mrZx5tKFaGcsEkYoIoUEG"
     },
     {
         "id": "54",
@@ -448,7 +528,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "2ABpKTmuoQWcQseKyuqAsc"
+        "location_id": "2ABpKTmuoQWcQseKyuqAsc",
+        "group_id": "1WmkTSeVIE4MEg60sWAa08",
+        "program_id": "4QAcZFNJ1mCAIquwEk00ag"
     },
     {
         "id": "55",
@@ -459,7 +541,9 @@
         "visible": "0",
         "place": "Centro Cultural los LLanos",
         "info": null,
-        "location_id": "3lpfFtgOVW4Ii0WYAqGcs2"
+        "location_id": "3lpfFtgOVW4Ii0WYAqGcs2",
+        "group_id": "1FQ95Vvg6IMCowkcGCi6oE",
+        "program_id": "1iAJAAH324CaE4mQeYCs8w"
     },
     {
         "id": "56",
@@ -470,7 +554,9 @@
         "visible": "0",
         "place": "Centro Cultural los LLanos",
         "info": null,
-        "location_id": "6Bg25bb8Vq44iE40oG6ECo"
+        "location_id": "6Bg25bb8Vq44iE40oG6ECo",
+        "group_id": "1FQ95Vvg6IMCowkcGCi6oE",
+        "program_id": "1iAJAAH324CaE4mQeYCs8w"
     },
     {
         "id": "57",
@@ -481,7 +567,9 @@
         "visible": "0",
         "place": null,
         "info": "Singer: Núria Rial",
-        "location_id": "2u24RXa8YwgEUaaE6GMMic"
+        "location_id": "2u24RXa8YwgEUaaE6GMMic",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "58",
@@ -492,7 +580,9 @@
         "visible": "0",
         "place": null,
         "info": "Singer: Núria Rial",
-        "location_id": "31cBZQI1a8KsEOewqcwOcU"
+        "location_id": "31cBZQI1a8KsEOewqcwOcU",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "59",
@@ -503,7 +593,9 @@
         "visible": "0",
         "place": null,
         "info": "Singer: Núria Rial",
-        "location_id": "5EoqDepAgEkeKCcg26UyaA"
+        "location_id": "5EoqDepAgEkeKCcg26UyaA",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "60",
@@ -514,7 +606,9 @@
         "visible": "0",
         "place": null,
         "info": "Singer: Núria Rial",
-        "location_id": "6BipKjdwVaauCAQwaSKag6"
+        "location_id": "6BipKjdwVaauCAQwaSKag6",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "61",
@@ -525,7 +619,9 @@
         "visible": "0",
         "place": "Salle Paderewski",
         "info": null,
-        "location_id": "5GPd6thH7Ua0gGWKOgUuoG"
+        "location_id": "5GPd6thH7Ua0gGWKOgUuoG",
+        "group_id": "4JovHIRJPOGuMgeQm62s6Q",
+        "program_id": "21NNA1xq7WUAkgY6sAuCoM"
     },
     {
         "id": "62",
@@ -536,7 +632,9 @@
         "visible": "0",
         "place": "Église St. Sigismond",
         "info": null,
-        "location_id": "6cwUEld77aWkaU22QgcWII"
+        "location_id": "6cwUEld77aWkaU22QgcWII",
+        "group_id": "4JovHIRJPOGuMgeQm62s6Q",
+        "program_id": "21NNA1xq7WUAkgY6sAuCoM"
     },
     {
         "id": "63",
@@ -547,7 +645,9 @@
         "visible": "0",
         "place": "Reformierte Kirche",
         "info": null,
-        "location_id": "55fXJJW4tqsKikU2kaSWyc"
+        "location_id": "55fXJJW4tqsKikU2kaSWyc",
+        "group_id": "6EOS8LXdKg0Cy2es6C6y8Q",
+        "program_id": "ySYYH4LuusOkcWiKwc8As"
     },
     {
         "id": "64",
@@ -558,7 +658,9 @@
         "visible": "0",
         "place": "Salle Cortot",
         "info": "Singer: Emöke Barath",
-        "location_id": "atgBf3MXVQcqa8QaKw4Gs"
+        "location_id": "atgBf3MXVQcqa8QaKw4Gs",
+        "group_id": "6AkjPYgUCcWqusoEsqGaku",
+        "program_id": "Gpz4zY3R2Ei0OiSyeq44Q"
     },
     {
         "id": "65",
@@ -569,7 +671,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "3EeMpWhO2Im0kQAs26g4uc"
+        "location_id": "3EeMpWhO2Im0kQAs26g4uc",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "1cFaaWMmfC0w62SgMsQYKE"
     },
     {
         "id": "66",
@@ -580,7 +684,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "2YNTdOSJXO4iKG60Aq2Coi"
+        "location_id": "2YNTdOSJXO4iKG60Aq2Coi",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "1cFaaWMmfC0w62SgMsQYKE"
     },
     {
         "id": "67",
@@ -591,7 +697,9 @@
         "visible": "0",
         "place": null,
         "info": "Singer: Núria Rial",
-        "location_id": "11KztVYWQaQwOO8ysygsAw"
+        "location_id": "11KztVYWQaQwOO8ysygsAw",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "68",
@@ -602,7 +710,9 @@
         "visible": "0",
         "place": "Maison de la Culture",
         "info": null,
-        "location_id": "4vyHygzN1u8yIcEWGo6gSQ"
+        "location_id": "4vyHygzN1u8yIcEWGo6gSQ",
+        "group_id": "2NBCMqzH44ySUAeyWSYc8c",
+        "program_id": "7K0qgP5GVOi2WgKcOegkA0"
     },
     {
         "id": "69",
@@ -613,7 +723,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "3rKW7bJ9m06UuuuaUiek0Q"
+        "location_id": "3rKW7bJ9m06UuuuaUiek0Q",
+        "group_id": "1WmkTSeVIE4MEg60sWAa08",
+        "program_id": "3uG1QCcAGIaqWG8GWIgoWu"
     },
     {
         "id": "70",
@@ -624,7 +736,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "5xQqn4rMuAigOyy2QI2kQw"
+        "location_id": "5xQqn4rMuAigOyy2QI2kQw",
+        "group_id": "1WmkTSeVIE4MEg60sWAa08",
+        "program_id": "3uG1QCcAGIaqWG8GWIgoWu"
     },
     {
         "id": "71",
@@ -635,7 +749,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "7eXvbkYYGAS8sAsmW2CCCy"
+        "location_id": "7eXvbkYYGAS8sAsmW2CCCy",
+        "group_id": "1B5ZazrYj262wMSQms4Y8S",
+        "program_id": "5N0DQmRcrYq2WoUSsSYSoU"
     },
     {
         "id": "74",
@@ -646,7 +762,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "69Oqk2KzFCA28sWYIwoWYe"
+        "location_id": "69Oqk2KzFCA28sWYIwoWYe",
+        "group_id": "1B5ZazrYj262wMSQms4Y8S",
+        "program_id": "5N0DQmRcrYq2WoUSsSYSoU"
     },
     {
         "id": "75",
@@ -657,7 +775,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "1zl2Oj3ZSYUSuksomWQwC8"
+        "location_id": "1zl2Oj3ZSYUSuksomWQwC8",
+        "group_id": "1B5ZazrYj262wMSQms4Y8S",
+        "program_id": "5N0DQmRcrYq2WoUSsSYSoU"
     },
     {
         "id": "76",
@@ -668,7 +788,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "5fuA570B5uGuQimIkE6oem"
+        "location_id": "5fuA570B5uGuQimIkE6oem",
+        "group_id": "1B5ZazrYj262wMSQms4Y8S",
+        "program_id": "5N0DQmRcrYq2WoUSsSYSoU"
     },
     {
         "id": "77",
@@ -679,7 +801,9 @@
         "visible": "0",
         "place": "Styriarte",
         "info": null,
-        "location_id": "2mevmkzuGMSM8mmggKMM44"
+        "location_id": "2mevmkzuGMSM8mmggKMM44",
+        "group_id": "1B5ZazrYj262wMSQms4Y8S",
+        "program_id": "5N0DQmRcrYq2WoUSsSYSoU"
     },
     {
         "id": "78",
@@ -690,7 +814,9 @@
         "visible": "0",
         "place": "Opera Corum",
         "info": "Opera Corum",
-        "location_id": "1ok4A01GXCwM6uoa8iEcWq"
+        "location_id": "1ok4A01GXCwM6uoa8iEcWq",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "79",
@@ -701,7 +827,9 @@
         "visible": "0",
         "place": "Salle de la Tuilerie",
         "info": "Salle de la Tuilerie",
-        "location_id": "2EQk8QmssgIs2iAYWCsQ0y"
+        "location_id": "2EQk8QmssgIs2iAYWCsQ0y",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "80",
@@ -712,7 +840,9 @@
         "visible": "0",
         "place": "Auditorium Les 2 Rhônes",
         "info": "Auditorium Les 2 Rhônes",
-        "location_id": "iFELETQufmW4ywqw0SugK"
+        "location_id": "iFELETQufmW4ywqw0SugK",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "81",
@@ -723,7 +853,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "2xsSejOQP6w8Ss6uYewwOk"
+        "location_id": "2xsSejOQP6w8Ss6uYewwOk",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "2uNpoSsgosmWoSaSKMSAAo"
     },
     {
         "id": "82",
@@ -734,7 +866,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "13PdvBJqNsi06eWyM0iKE2"
+        "location_id": "13PdvBJqNsi06eWyM0iKE2",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "2uNpoSsgosmWoSaSKMSAAo"
     },
     {
         "id": "83",
@@ -745,7 +879,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "2SUkh5wukMqaKimaAc6cWg"
+        "location_id": "2SUkh5wukMqaKimaAc6cWg",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "2uNpoSsgosmWoSaSKMSAAo"
     },
     {
         "id": "84",
@@ -756,7 +892,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "2XsuFkkW92MYi8yGWoiyQA"
+        "location_id": "2XsuFkkW92MYi8yGWoiyQA",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "2uNpoSsgosmWoSaSKMSAAo"
     },
     {
         "id": "85",
@@ -767,7 +905,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "3JQMtQEeKAYGIcoYkuSCgA"
+        "location_id": "3JQMtQEeKAYGIcoYkuSCgA",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "2uNpoSsgosmWoSaSKMSAAo"
     },
     {
         "id": "86",
@@ -778,7 +918,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "7uXMBKPz4kciKm820282Ai"
+        "location_id": "7uXMBKPz4kciKm820282Ai",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "2uNpoSsgosmWoSaSKMSAAo"
     },
     {
         "id": "87",
@@ -789,7 +931,9 @@
         "visible": "0",
         "place": "Basilique Saint-Sauveur",
         "info": "En collaboration avec La Main Harmonique Dans le cadre du Festival de musique sacrée de Rocamadour",
-        "location_id": "44p4DCK5Q44eMMY20gmKI0"
+        "location_id": "44p4DCK5Q44eMMY20gmKI0",
+        "group_id": "2efeRGYG3Gq6cEEQqOuCae",
+        "program_id": "4BqYzSYEZWWOuQYyUG2CUw"
     },
     {
         "id": "88",
@@ -800,7 +944,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "2g7Fq8B9HKEq4s8wIMAEwS"
+        "location_id": "2g7Fq8B9HKEq4s8wIMAEwS",
+        "group_id": "3I2aCAqA0gsiYyiCECEgac",
+        "program_id": "2ufSMJ2UYY6UCIyuuOmAKc"
     },
     {
         "id": "89",
@@ -811,7 +957,9 @@
         "visible": "0",
         "place": null,
         "info": "Singer: Nuria Rial",
-        "location_id": "6mhm2hQNKEOESO0Wqw08Yq"
+        "location_id": "6mhm2hQNKEOESO0Wqw08Yq",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "90",
@@ -822,7 +970,9 @@
         "visible": "0",
         "place": null,
         "info": "Singer: Nuria Rial",
-        "location_id": "7zmGGJz7La8wwEccoWAUU2"
+        "location_id": "7zmGGJz7La8wwEccoWAUU2",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "91",
@@ -833,7 +983,9 @@
         "visible": "0",
         "place": null,
         "info": "Singer: Arcangel",
-        "location_id": "66gNoMzzgsqII62osYw0Wq"
+        "location_id": "66gNoMzzgsqII62osYw0Wq",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "53991aM4haKkmCUg0w0ygY"
     },
     {
         "id": "92",
@@ -844,7 +996,9 @@
         "visible": "0",
         "place": "Teatro alla Scala Orchestra on period instruments",
         "info": "New Teatro alla Scala Production",
-        "location_id": "64KjtcuU2AmOmo4KaQWs2E"
+        "location_id": "64KjtcuU2AmOmo4KaQWs2E",
+        "group_id": "UuAawefd6K6IMwYO0kIem",
+        "program_id": "5sMSZmPxZuwmiKIGSaCmYY"
     },
     {
         "id": "93",
@@ -855,7 +1009,9 @@
         "visible": "0",
         "place": "Teatro alla Scala Orchestra on period instruments",
         "info": "New Teatro alla Scala Production",
-        "location_id": "ZF85bRaqKko8OckwSmmKc"
+        "location_id": "ZF85bRaqKko8OckwSmmKc",
+        "group_id": "UuAawefd6K6IMwYO0kIem",
+        "program_id": "5sMSZmPxZuwmiKIGSaCmYY"
     },
     {
         "id": "94",
@@ -866,7 +1022,9 @@
         "visible": "0",
         "place": "Lutherse Kerk",
         "info": null,
-        "location_id": "67JHNEfp1mYoimKuyCWGge"
+        "location_id": "67JHNEfp1mYoimKuyCWGge",
+        "group_id": "7GgRjYO5LqUUGMyWAys2OW",
+        "program_id": "5VZ6HkiQHmaIMcq4wO44IY"
     },
     {
         "id": "95",
@@ -877,7 +1035,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "3MhQnyZLzyyICMUSsssgAW"
+        "location_id": "3MhQnyZLzyyICMUSsssgAW",
+        "group_id": "3ktjiyni8oG6U6I6S0secc",
+        "program_id": "4L9k0rp40ooaSsC86qgi6Q"
     },
     {
         "id": "96",
@@ -888,7 +1048,9 @@
         "visible": "0",
         "place": "Theodorskirche",
         "info": null,
-        "location_id": "WJFG3jr8mkooYAGgGqMW4"
+        "location_id": "WJFG3jr8mkooYAGgGqMW4",
+        "group_id": "3ktjiyni8oG6U6I6S0secc",
+        "program_id": "4L9k0rp40ooaSsC86qgi6Q"
     },
     {
         "id": "97",
@@ -899,7 +1061,9 @@
         "visible": "0",
         "place": "Auditorium Saint-Pierre des Cuisines",
         "info": null,
-        "location_id": "vRjMsXQXx6w6koO4aAiiw"
+        "location_id": "vRjMsXQXx6w6koO4aAiiw",
+        "group_id": "2efeRGYG3Gq6cEEQqOuCae",
+        "program_id": "6MF6iNKfZY6igOkmmocYUK"
     },
     {
         "id": "98",
@@ -910,7 +1074,9 @@
         "visible": "0",
         "place": "Abbatiale",
         "info": null,
-        "location_id": "65zRK1o304QowkC8syEUUw"
+        "location_id": "65zRK1o304QowkC8syEUUw",
+        "group_id": "2efeRGYG3Gq6cEEQqOuCae",
+        "program_id": "6Dy1Juead2Qu6agemEyUYC"
     },
     {
         "id": "99",
@@ -921,7 +1087,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "6bSxUUp0NUIG0coaqQqSak"
+        "location_id": "6bSxUUp0NUIG0coaqQqSak",
+        "group_id": "3I2aCAqA0gsiYyiCECEgac",
+        "program_id": "1nQqVUAGDG8OwiiQqumUOa"
     },
     {
         "id": "100",
@@ -932,7 +1100,9 @@
         "visible": "0",
         "place": "Opéra Comédie",
         "info": "Nathalie Stutzmann, contralto & direction",
-        "location_id": "6y5odiTHpY0OkEUus6iKM"
+        "location_id": "6y5odiTHpY0OkEUus6iKM",
+        "group_id": "2K7fgh7984qmgQAsKCOkck",
+        "program_id": "1dUwYwl7jCCooawyAuwQyW"
     },
     {
         "id": "101",
@@ -943,7 +1113,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "8H8YXPfPtmOK6a04Uw6iI"
+        "location_id": "8H8YXPfPtmOK6a04Uw6iI",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "5sUUjjplgAQqi8sacaeUEG"
     },
     {
         "id": "102",
@@ -954,7 +1126,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "2W3SzbKLhSusQ2AOcOq2IC"
+        "location_id": "2W3SzbKLhSusQ2AOcOq2IC",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "65eqYkPFU4eImWeaGmYigM"
     },
     {
         "id": "103",
@@ -965,7 +1139,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "7gnCV8qg2QSk8MgOUymMwA"
+        "location_id": "7gnCV8qg2QSk8MgOUymMwA",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "65eqYkPFU4eImWeaGmYigM"
     },
     {
         "id": "104",
@@ -976,7 +1152,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "1JAjszp0GsuAaGOqacaAUS"
+        "location_id": "1JAjszp0GsuAaGOqacaAUS",
+        "group_id": "qJ9x25UQWku2ag2QsseAc",
+        "program_id": "65eqYkPFU4eImWeaGmYigM"
     },
     {
         "id": "105",
@@ -987,7 +1165,9 @@
         "visible": "0",
         "place": "Église de Lauenen",
         "info": null,
-        "location_id": "6pAkBHyngA60gqmIgwGE6c"
+        "location_id": "6pAkBHyngA60gqmIgwGE6c",
+        "group_id": "2K7fgh7984qmgQAsKCOkck",
+        "program_id": "1dUwYwl7jCCooawyAuwQyW"
     },
     {
         "id": "106",
@@ -998,7 +1178,9 @@
         "visible": "0",
         "place": null,
         "info": "Cembalo & direction: Francesco Corti, Singer: Emöke Barath",
-        "location_id": "6gXf1SJXwcIAKMKeQcg4sY"
+        "location_id": "6gXf1SJXwcIAKMKeQcg4sY",
+        "group_id": "6AkjPYgUCcWqusoEsqGaku",
+        "program_id": "38bIZLQOnCq8oaI2gyAo4S"
     },
     {
         "id": "107",
@@ -1009,7 +1191,9 @@
         "visible": "0",
         "place": "Pierre Boulez Saal,",
         "info": "Singer: Sonia Prina",
-        "location_id": "3SUHxMAbpCY4SeOUSikOk4"
+        "location_id": "3SUHxMAbpCY4SeOUSikOk4",
+        "group_id": "4yOt3g732M6k8gyWUgoqGS",
+        "program_id": "3wC6UHqmWsYaGsoUscW6EU"
     },
     {
         "id": "108",
@@ -1020,7 +1204,9 @@
         "visible": "0",
         "place": "Wigmore Hall",
         "info": "Singer: Sonia Prina",
-        "location_id": "1rxJrACwxm88mkO8OkGO8u"
+        "location_id": "1rxJrACwxm88mkO8OkGO8u",
+        "group_id": "4yOt3g732M6k8gyWUgoqGS",
+        "program_id": "3wC6UHqmWsYaGsoUscW6EU"
     },
     {
         "id": "109",
@@ -1031,7 +1217,9 @@
         "visible": "0",
         "place": null,
         "info": "Singers: Roberta Mameli & Juan Sancho",
-        "location_id": "5gjYqfpz3ysS24cQkQom0A"
+        "location_id": "5gjYqfpz3ysS24cQkQom0A",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "5mqXFP1tbGwggQggE2eoyy"
     },
     {
         "id": "110",
@@ -1042,7 +1230,9 @@
         "visible": "0",
         "place": "Abbaye Musicale de Malonne",
         "info": null,
-        "location_id": "5duVDVAAtiScqOwIIsGG6g"
+        "location_id": "5duVDVAAtiScqOwIIsGG6g",
+        "group_id": "2NBCMqzH44ySUAeyWSYc8c",
+        "program_id": "5zbukCTXNK2OeaISuswKe4"
     },
     {
         "id": "111",
@@ -1053,7 +1243,9 @@
         "visible": "0",
         "place": "Chapelle Royale",
         "info": "Direction: Leonardo Garcia Alarcón",
-        "location_id": "3tATnZEaYgyyGM2MaWQKsy"
+        "location_id": "3tATnZEaYgyyGM2MaWQKsy",
+        "group_id": "2NBCMqzH44ySUAeyWSYc8c",
+        "program_id": "5zbukCTXNK2OeaISuswKe4"
     },
     {
         "id": "112",
@@ -1064,7 +1256,9 @@
         "visible": "0",
         "place": "Auditorium du Grand Avignon",
         "info": "Jean-Pierre Canihac, cornet à bouquin & direction",
-        "location_id": "7wADnkJULC2Aiouiye4oOw"
+        "location_id": "7wADnkJULC2Aiouiye4oOw",
+        "group_id": "2efeRGYG3Gq6cEEQqOuCae",
+        "program_id": "241icBdbgg84Wc4mgYuSYa"
     },
     {
         "id": "113",
@@ -1075,7 +1269,9 @@
         "visible": "0",
         "place": "La Seine Musicale",
         "info": null,
-        "location_id": "12adWiINhKwGESgcUgAEUS"
+        "location_id": "12adWiINhKwGESgcUgAEUS",
+        "group_id": "2K7fgh7984qmgQAsKCOkck",
+        "program_id": "5zSvRPAyJycA6s8UAsAWqm"
     },
     {
         "id": "114",
@@ -1086,7 +1282,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "6nMcPD3AqcYUScE2WeIuwM"
+        "location_id": "6nMcPD3AqcYUScE2WeIuwM",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "115",
@@ -1097,7 +1295,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "4ja357BVZ6McimoeWqgwKK"
+        "location_id": "4ja357BVZ6McimoeWqgwKK",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "116",
@@ -1108,7 +1308,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "2AcZy9kouc2OYkCqoOSq8g"
+        "location_id": "2AcZy9kouc2OYkCqoOSq8g",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "42A8wDz2hOqq6SsSaW82sg"
     },
     {
         "id": "117",
@@ -1119,7 +1321,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "4rtUl7kMOIGMAQGA2KAiSK"
+        "location_id": "4rtUl7kMOIGMAQGA2KAiSK",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "1cFaaWMmfC0w62SgMsQYKE"
     },
     {
         "id": "118",
@@ -1130,7 +1334,9 @@
         "visible": "0",
         "place": "Le Corum",
         "info": null,
-        "location_id": "33pafOGwfYwwKEoImo0mGI"
+        "location_id": "33pafOGwfYwwKEoImo0mGI",
+        "group_id": "3EWxcgk9JS6MqmG0Qk0SWg",
+        "program_id": "3l83K5UEooMSyge8eWgCu0"
     },
     {
         "id": "119",
@@ -1141,7 +1347,9 @@
         "visible": "0",
         "place": "Auditorio Ciudad de León",
         "info": null,
-        "location_id": "6ujQOBecRGAYy8EgiAKkI0"
+        "location_id": "6ujQOBecRGAYy8EgiAKkI0",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "120",
@@ -1152,7 +1360,9 @@
         "visible": "0",
         "place": null,
         "info": null,
-        "location_id": "5guTifcBioMcgykEkSkakC"
+        "location_id": "5guTifcBioMcgykEkSkakC",
+        "group_id": "5kTw8q6IV2m2m8iEM8a6cw",
+        "program_id": "4BDSgiuQwMuUq2UisaKaUS"
     },
     {
         "id": "121",
@@ -1163,7 +1373,9 @@
         "visible": "0",
         "place": "Théâtre Populaire Romand",
         "info": null,
-        "location_id": "65V0J99P1uAeegMUy0GUU0"
+        "location_id": "65V0J99P1uAeegMUy0GUU0",
+        "group_id": "2K7fgh7984qmgQAsKCOkck",
+        "program_id": "5zSvRPAyJycA6s8UAsAWqm"
     },
     {
         "id": "122",
@@ -1174,6 +1386,8 @@
         "visible": "0",
         "place": "St. Bartholomäus-Kirche",
         "info": null,
-        "location_id": "2GSbAC7XrqSiQAW4W8G2gu"
+        "location_id": "2GSbAC7XrqSiQAW4W8G2gu",
+        "group_id": "4yOt3g732M6k8gyWUgoqGS",
+        "program_id": "3wC6UHqmWsYaGsoUscW6EU"
     }
 ]

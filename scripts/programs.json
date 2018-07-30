@@ -1,0 +1,320 @@
+[
+    {
+        "id": "3",
+        "name": "Rediscovering Spain",
+        "author": null,
+        "_id": "20zV5RD3I0maAMI82AGqu2"
+    },
+    {
+        "id": "4",
+        "name": "Rediscovering Spain",
+        "author": null,
+        "_id": "42A8wDz2hOqq6SsSaW82sg"
+    },
+    {
+        "id": "5",
+        "name": "Arie Antiche",
+        "author": "0",
+        "_id": "5zSvRPAyJycA6s8UAsAWqm"
+    },
+    {
+        "id": "6",
+        "name": "Passion selon St-Jean BWV 245",
+        "author": "Jean-Sébastien Bach",
+        "_id": "4ctciaYJxeWq2ssEsSOeao"
+    },
+    {
+        "id": "7",
+        "name": "Dido y Eneas",
+        "author": "Henry Purcell",
+        "_id": "4zOpLDOFmUC4UeCSs4MyGY"
+    },
+    {
+        "id": "8",
+        "name": "Fairy Queen",
+        "author": "Henry Purcell",
+        "_id": "3F9giy717GggWcC8yAiS6I"
+    },
+    {
+        "id": "9",
+        "name": "Una gala Barroca en Londres",
+        "author": null,
+        "_id": "7uvp6f037iWwq2eWWcuY84"
+    },
+    {
+        "id": "10",
+        "name": "Maurizio Cazzati op. 36",
+        "author": null,
+        "_id": "5W49ye27F6YeoOWGUyWyq4"
+    },
+    {
+        "id": "11",
+        "name": "Sebastián Durón",
+        "author": null,
+        "_id": "1IbJhcn4XGqk2Mwc44iY0m"
+    },
+    {
+        "id": "12",
+        "name": "Artaserse",
+        "author": "Leonardo Vinci",
+        "_id": "3s38ja1GLYW2oWI8yI2YYw"
+    },
+    {
+        "id": "13",
+        "name": "Messias",
+        "author": "Handel",
+        "_id": "4kJBdac10A8cwiOK8ik2G6"
+    },
+    {
+        "id": "14",
+        "name": "L\\'arte del Madrigale",
+        "author": null,
+        "_id": "15FrWWrOhAAI0QC0MeWwIG"
+    },
+    {
+        "id": "15",
+        "name": "Viola da gamba y Tiorba",
+        "author": null,
+        "_id": "6yBOmtwtXyuIC2WOicGe8y"
+    },
+    {
+        "id": "16",
+        "name": "Motette \\\"Jesu meine Freude\\\" BWV 227, ”Lutherische Messe” A-Dur BWV 234.",
+        "author": "J.S. Bach",
+        "_id": "2CZ35hlPgg4S4akEMU8Ukq"
+    },
+    {
+        "id": "17",
+        "name": "Handel",
+        "author": "Handel",
+        "_id": "6XnTR6QiSkI6qg2YOOCWCa"
+    },
+    {
+        "id": "18",
+        "name": "Heroes from the shadows",
+        "author": "Handel",
+        "_id": "1opuTmjPKc6GaQq8YuA4iw"
+    },
+    {
+        "id": "19",
+        "name": "A vos mi dueño amado",
+        "author": null,
+        "_id": "4vHOyrVABaOIU4WuM420IO"
+    },
+    {
+        "id": "20",
+        "name": "Muera Cupido",
+        "author": "Sebastian Durón",
+        "_id": "4BDSgiuQwMuUq2UisaKaUS"
+    },
+    {
+        "id": "21",
+        "name": "Les Vêpres de Monteverdi",
+        "author": null,
+        "_id": "1EEnOnnm5W0s6oQq6QE6eO"
+    },
+    {
+        "id": "22",
+        "name": "Les Goûts Réunis",
+        "author": null,
+        "_id": "2nqAXwthF6uoW44mcsKI4i"
+    },
+    {
+        "id": "23",
+        "name": "À l\\'espagnole, fantasía escénica",
+        "author": null,
+        "_id": "4gvI7A9Sc86yuKoAUOCGSo"
+    },
+    {
+        "id": "24",
+        "name": "À l\\'espagnole, fantasía escénica",
+        "author": null,
+        "_id": "3rqTaW2WN2I2sW6aImyiya"
+    },
+    {
+        "id": "25",
+        "name": "Heroes from the Shadows",
+        "author": null,
+        "_id": "2njzutrUHmICiW4cS8kE8c"
+    },
+    {
+        "id": "26",
+        "name": "Mito d`Orfeo",
+        "author": "Monteverdi, Rossi, Sartorio & Gluck",
+        "_id": "6mlfgfnEGImWUOAAMSSaQM"
+    },
+    {
+        "id": "27",
+        "name": "Los Muros de la Patria mia",
+        "author": "Kohaut, Fasch, Vivaldi...",
+        "_id": "4mrZx5tKFaGcsEkYoIoUEG"
+    },
+    {
+        "id": "28",
+        "name": "Jephta HWV 70",
+        "author": "G.F. Handel",
+        "_id": "4QAcZFNJ1mCAIquwEk00ag"
+    },
+    {
+        "id": "29",
+        "name": "Extractos de “Selva Morale”",
+        "author": "Claudio Monteverdi",
+        "_id": "1iAJAAH324CaE4mQeYCs8w"
+    },
+    {
+        "id": "30",
+        "name": "Choeur Ardito",
+        "author": "Vivaldi/Handel",
+        "_id": "21NNA1xq7WUAkgY6sAuCoM"
+    },
+    {
+        "id": "31",
+        "name": "Canto e Basso",
+        "author": null,
+        "_id": "ySYYH4LuusOkcWiKwc8As"
+    },
+    {
+        "id": "32",
+        "name": "Mi palpita il Cor",
+        "author": "Handel/Scarlatti/Bach",
+        "_id": "Gpz4zY3R2Ei0OiSyeq44Q"
+    },
+    {
+        "id": "33",
+        "name": "Ecco L´alba Luminosa",
+        "author": null,
+        "_id": "1cFaaWMmfC0w62SgMsQYKE"
+    },
+    {
+        "id": "34",
+        "name": "Amore Siciliano",
+        "author": null,
+        "_id": "7K0qgP5GVOi2WgKcOegkA0"
+    },
+    {
+        "id": "35",
+        "name": "Johannes-Passion BWV 245",
+        "author": null,
+        "_id": "3uG1QCcAGIaqWG8GWIgoWu"
+    },
+    {
+        "id": "36",
+        "name": "Los Elementos",
+        "author": "Antonio Literes",
+        "_id": "5N0DQmRcrYq2WoUSsSYSoU"
+    },
+    {
+        "id": "37",
+        "name": "La Lisarda - Amore Vuol Gioventù",
+        "author": null,
+        "_id": "2uNpoSsgosmWoSaSKMSAAo"
+    },
+    {
+        "id": "38",
+        "name": "Les Vêpres de la Vierge",
+        "author": "C. Monterverdi",
+        "_id": "4BqYzSYEZWWOuQYyUG2CUw"
+    },
+    {
+        "id": "39",
+        "name": "ALTRI CANTI D\\'AMOR",
+        "author": null,
+        "_id": "2ufSMJ2UYY6UCIyuuOmAKc"
+    },
+    {
+        "id": "40",
+        "name": "Las idas y las vueltas",
+        "author": null,
+        "_id": "53991aM4haKkmCUg0w0ygY"
+    },
+    {
+        "id": "41",
+        "name": "Tamerlano",
+        "author": "Georg Friedrich Händel",
+        "_id": "5sMSZmPxZuwmiKIGSaCmYY"
+    },
+    {
+        "id": "42",
+        "name": "Villancicos",
+        "author": "Juan del Encina",
+        "_id": "5VZ6HkiQHmaIMcq4wO44IY"
+    },
+    {
+        "id": "43",
+        "name": "Vier Jahreszeiten im Wandel",
+        "author": "J.-Ph. Rameau, Vivaldi, Ph. Glass",
+        "_id": "4L9k0rp40ooaSsC86qgi6Q"
+    },
+    {
+        "id": "44",
+        "name": "Siglo de Oro (l’Espagne musicale du XVIe siècle)",
+        "author": null,
+        "_id": "6MF6iNKfZY6igOkmmocYUK"
+    },
+    {
+        "id": "45",
+        "name": "Concerti Ecclesiastici",
+        "author": "Giovanni Paolo Cima",
+        "_id": "6Dy1Juead2Qu6agemEyUYC"
+    },
+    {
+        "id": "46",
+        "name": "AD SERVITIUM ECCLESIAE",
+        "author": null,
+        "_id": "1nQqVUAGDG8OwiiQqumUOa"
+    },
+    {
+        "id": "47",
+        "name": "Quella Fiamma! Arie Antiche",
+        "author": null,
+        "_id": "1dUwYwl7jCCooawyAuwQyW"
+    },
+    {
+        "id": "48",
+        "name": "LATINOS",
+        "author": null,
+        "_id": "5sUUjjplgAQqi8sacaeUEG"
+    },
+    {
+        "id": "49",
+        "name": "Fuego Fuego!",
+        "author": null,
+        "_id": "65eqYkPFU4eImWeaGmYigM"
+    },
+    {
+        "id": "50",
+        "name": "Mi Palpita Il Cor",
+        "author": null,
+        "_id": "38bIZLQOnCq8oaI2gyAo4S"
+    },
+    {
+        "id": "51",
+        "name": "Akamus & Sonia Prina",
+        "author": null,
+        "_id": "3wC6UHqmWsYaGsoUscW6EU"
+    },
+    {
+        "id": "52",
+        "name": "IL GRAN TEATRO DEL MONDO",
+        "author": null,
+        "_id": "5mqXFP1tbGwggQggE2eoyy"
+    },
+    {
+        "id": "53",
+        "name": "La dernière nuit / Motets de Lully",
+        "author": null,
+        "_id": "5zbukCTXNK2OeaISuswKe4"
+    },
+    {
+        "id": "54",
+        "name": "Ludi Musici",
+        "author": null,
+        "_id": "241icBdbgg84Wc4mgYuSYa"
+    },
+    {
+        "id": "55",
+        "name": "Prima Donna",
+        "author": "Vivaldi",
+        "_id": "3l83K5UEooMSyge8eWgCu0"
+    }
+]
