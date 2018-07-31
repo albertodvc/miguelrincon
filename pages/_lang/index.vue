@@ -37,7 +37,6 @@
   import {createClient} from '~/lib/contentful.js'
   import perfoMap from '~/utils/perfoMap.js'
   import PerfoList from '~/components/perfoes/perfoList/PerfoList.vue'
-  import fitToViewport from '~/directives/fitToViewport'
 
   const API = createClient()
 
@@ -46,9 +45,6 @@
     components: {
       VueMarkdown,
       PerfoList
-    },
-    directives: {
-      fitToViewport: fitToViewport
     },
     fetch({ store }) {
         store.commit('increment')
