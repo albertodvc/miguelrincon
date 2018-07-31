@@ -1,0 +1,1499 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass/css3";
+@import "compass/utilities";
+@import "styles/normalize";
+@import "styles/typography";
+@import "styles/layout";
+@import "styles/backgrounds";
+@import "styles/colors";
+@import "styles/shadows";
+@import "styles/media_queries";
+@import "modularscale";
+
+
+$small-padding: 7%;
+$small-vertical-padding: 20px;
+$top-bar-height: 50px;
+$smal-section-header-height: 200px;
+$medium-section-header-height: 300px;
+$top-bar-bg: rgba(0, 0, 0, 0.9);
+$menu-animation-time: 0.25s;
+$side-menu-width: 175px;
+
+$social-button-size: 40px;
+$footer-bg: #222222;
+$footer-font-color: white;
+$link-transition-duration: 0.1s;
+
+html {
+	width: 100%;
+	font-family: "Myriad Pro", Myriad, sans-serif;
+}
+
+body {
+	width: 100%;
+	@extend .mid-gray-background;
+	@extend .lighter-background;
+	@include ipad-landscape {
+		-webkit-text-size-adjust: none;
+	}
+}
+p {
+	@extend .body-text;
+	color: $body-text-color;
+}
+blockquote {
+
+	color: lighten($body-text-color, 10%);
+	font-weight: 200;
+	p:first-child {
+		@extend .quote-text;
+		// width: 100%;
+		&::before {
+			color: $lightest-gray;
+			display: inline-block;
+			content: "";
+			font-size: 35px;
+			margin-right: 5px;
+			width: 35px;
+			height: 35px;
+			background: url('data:image/svg+xml;utf8,<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.516px" height="23.516px" viewBox="0 0 23.516 23.516" style="enable-background:new 0 0 23.516 23.516;" xml:space="preserve"><path fill="#{$lightest-gray}" d="M8.074,0.333c0.594,0,1.504,0.04,2.729,0.118v4.571c-3.721,0-5.578,1.721-5.578,5.163l0.06,2.077h3.856v10.92H0v-11.81 C0.001,4.012,2.693,0.333,8.074,0.333z M23.516,5.022V0.451c-1.066-0.078-1.818-0.118-2.254-0.118c-5.381,0-8.07,3.68-8.07,11.04 v11.81h9.139v-10.92h-3.857l-0.059-2.077C18.413,6.941,20.116,5.22,23.516,5.022z"/></svg>');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			@include transform(skewX(-20deg));
+		}
+
+	}
+	p:last-child {
+		@extend .quote-text;
+		//font-size: 17px;
+		font-weight: bold;
+	}
+}
+a { color: $highlight-text-color; }
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+nav {
+	@include box-sizing(border-box);
+	width: 100%;
+	height: $top-bar-height;
+	position: fixed;
+	z-index: 200;
+	background-color: $top-bar-bg;
+	@include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
+
+	h1 {
+		margin: 0;
+    	padding-top: 19px;
+    	padding-left: $small-padding;
+    	float: left;
+
+	}
+	#logo {
+		@include box-sizing("border-box");
+		@extend .miguel-rincon-typeface;
+		//font-size: 50px; // Normal size
+		font-size: 40px;
+		display: block;
+		line-height: 34px;
+		color: $white;
+		text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+		//text-shadow: 0 0 5px rgba(0, 0, 0, 0.6), 0px -5px 0px black, 1px -3px 0px black, 1px -2px 0px black;
+		text-decoration: none;
+	}
+	.navigator-toggle {
+		@include breakpoint(958px) {
+			display: none;
+		}
+	}
+
+	.navigation {
+
+		position: fixed;
+		top: $top-bar-height;
+		bottom: 0;
+		right: -$side-menu-width;
+		&.is-open {right: 0;}
+		background-color: $top-bar-bg;
+		margin: 0;
+		padding-top: 20px;
+		width: $side-menu-width;
+		z-index: 100;
+		@include transition(all $menu-animation-time ease-in-out);
+		@include box-shadow(0px 4px 5px rgba(0, 0, 0, 0.7));
+		// @include breakpoint(690px) {
+		// 	bottom: $medium-section-header-height;
+		// }
+		@include breakpoint(958px) {
+			background: none;
+			position: static;
+			margin: inherit;
+			float: right;
+			padding: 0 $small-padding;
+			width: auto;
+			@include box-shadow(none);
+		}
+		li {
+			padding: 0;
+			@include breakpoint(958px) {
+				display: inline-block;
+			}
+			a {
+				text-decoration: none;
+				color: $white;
+				display: block;
+				padding: 20px 37px;
+				@include breakpoint(958px) {
+					padding: 32px 12px 0px 12px;
+					text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+					margin: 0;
+
+				}
+				&:focus {
+					outline : none;
+				}
+			}
+			&:last-child {
+				a {
+					padding-right: 0;
+				}
+			}
+		}
+
+
+		// li {
+		// 	display: inline-block;
+			// a {
+			// 	padding: 12px;
+			// 	line-height: 36px;
+			// }
+		// }
+		// h1 {
+		// 	float: left;
+		// 	margin-bottom: 0;
+		// 	margin-top: 15px;
+		// }
+		// ul {
+		// 	float: right;
+		// 	margin-right: 25px;
+		// }
+	}
+
+
+}
+
+section{
+	header {
+		@include box-sizing(border-box);
+		background-position: center center;
+		background-color: black;
+		background-size: cover;
+		position: relative;
+		height: $smal-section-header-height;
+		padding: 0 $small-padding;
+		width: 100%;
+
+		@include breakpoint(690px) {
+			height: $medium-section-header-height;
+		}
+		@include breakpoint(958px) {
+			height: 500px;
+		}
+
+		h2 {
+			text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+			text-transform: uppercase;
+			color: $white;
+			display: block;
+			font-size: 35px;
+			position: absolute;
+			bottom: $small-vertical-padding;
+			margin: 0;
+			line-height: 0.85;
+			margin-bottom: 10px;
+
+			span.miguel {
+				display: block;
+				font-family: "main-header";
+				font-weight: normal;
+				text-transform: none;
+
+			}
+
+			@include breakpoint(545px) {
+				font-size: 45px;
+			}
+			@include breakpoint(616px) {
+				font-size: 70px;
+			}
+			@include breakpoint(690px) {
+				&#front-page-title {
+					bottom: 92px;
+				}
+			}
+			@include breakpoint(958px) {
+				font-size: 80px;
+				span.miguel {
+					font-size: 110px;
+				}
+			}
+			@include breakpoint(1024px) {
+				font-size: 90px;
+				text-align: center;
+				line-height: 80px;
+				font-weight: bold;
+				left: 50%;
+				margin: -80px 0 0 -480px;
+				position: absolute;
+				//text-align: center;
+
+				top: 50%;
+				width: 960px;
+				span.miguel {
+					ont-size: 137px;
+					margin-bottom: 40px;
+				}
+			}
+			// @include ipad-landscape {
+			// 	position: absolute!important;
+			// }
+		}
+	}
+	// @include ipad-landscape {
+	// 	background: none;
+	// }
+	&.parallax {
+		background-attachment: fixed;
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+	}
+}
+
+section {
+	// margin-left: 0;
+	// width: 100%;
+	// @include filter(blur(0));
+	// @include transition(all $menu-animation-time ease-in-out);
+	&:before {
+		opacity: 0;
+		content: "";
+		position: absolute;
+		@include transition(opacity $menu-animation-time ease-in-out);
+	}
+
+	&.menu-opened {
+		position: relative;
+		//@include filter(blur(1px));
+		&:before {
+			position: absolute;
+			z-index: 90;
+			content: "";
+			height: 100%;
+			right: 0;
+			left: 0;
+			background: black;
+			opacity: 0.4;
+			@include transition(opacity $menu-animation-time ease-in-out);
+		}
+		// margin-left: -$side-menu-width;
+		// @include transition(margin $menu-animation-time ease-in-out);
+	}
+	@include breakpoint(958px) {
+		//@include filter(none);
+		&:before {
+			content: none;
+
+		}
+		// margin-left: 0;
+		// @include transition(none);
+	}
+}
+
+article {
+	@include clearfix;
+	//min-height: 705px;
+	background-color: white;
+	padding: 20px 0;
+	@include box-sizing(border-box);
+	@include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.9));
+	position: relative;
+	z-index: 10;
+	@include breakpoint(960px) {
+		padding: 60px 0;
+		.content {
+			padding-bottom: 60px;
+		}
+	}
+	.content {
+		//@include clearfix;
+		@include box-sizing(border-box);
+		padding: 0 $small-padding;
+		width: 100%;
+		margin: 0;
+
+		padding-bottom: $small-vertical-padding;
+		@include breakpoint(960px) {
+			padding-bottom: 60px;
+
+		}
+		// @include breakpoint(525px) {
+		// 	padding: 0 60px;
+		// }
+
+		@include small-desktop {
+			width: 960px;
+			margin: 0 auto;
+			padding: 0 0 60px 0;
+		}
+	}
+	.content + blockquote {
+		@include box-sizing(border-box);
+		width: 100%;
+		border-top: 1px dashed $light-gray;
+		margin: 0;
+		padding: $small-padding/2 $small-padding 0 $small-padding;
+		p {
+			// width: 400px;
+			// margin: 0 auto;
+			//margin-bottom: 15px;
+		}
+		@include breakpoint(700px) {
+			padding: $small-padding/2 0 0 0;
+			p {
+				width: 450px;
+				margin: 0 auto;
+			}
+		}
+		@include breakpoint(960px) {
+			padding-top: 40px;
+		}
+	}
+}
+
+
+
+#front-page {
+
+	header,
+	&.parallax {
+		background-image: url('/images/background/sections/guitarra_1.jpg');
+		&:before {
+			content: "";
+			@include box-sizing(border-box);
+			display: block;
+			background: inline-image('/background/sections/guitarra_1_load.jpg');
+			position: absolute;
+			top: 0;
+			width: 100%;
+			left: 0;
+			background-repeat: no-repeat;
+    		background-position: center center;
+    		background-size: cover;
+    		z-index: 0;
+    		@include filter(blur(5px));
+    		@include transition(opacity 0.5s ease-in-out);
+    		opacity: 1;
+		}
+		&.img-loaded:before {
+			opacity: 0;
+		}
+	}
+	&.parallax {
+		&:before {
+			position: absolute;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+    		background-position: center center;
+    		background-size: cover;
+		}
+	}
+
+	header,
+	header:before,
+	&.parallax:before {
+		margin: 0;
+		padding: 0;
+		height: $smal-section-header-height + $top-bar-height;
+		padding-top: $top-bar-height;
+
+		@include breakpoint(690px) {
+			height: $medium-section-header-height + $top-bar-height;
+		}
+		@include breakpoint(958px) {
+			height: 500px + $top-bar-height;
+		}
+		@include breakpoint(1025px) {
+			height:100vh;
+		}
+	}
+	&.parallax {
+		header {
+			background: none;
+			padding: 0;
+			.video-wrapper {
+				position: fixed;
+			}
+			&:before {
+				content: none;
+				display: none;
+				opacity: 0;
+			}
+		}
+		@include breakpoint(1024px) {
+			h2 { position: fixed;}
+		}
+
+
+
+	}
+
+	// @include small-desktop {
+	// 	header {
+	// 		background: none;
+	// 	}
+	// 	background-image: url('/images/background/sections/guitarra_1.jpg');
+	// 	background-position: 28% center;
+	// }
+	//@include transition(background 4s ease-in-out);
+
+	h2 {
+		width: 100%;
+		text-align: center;
+		// margin: 0;
+		@include breakpoint(1024px) {
+			//position: fixed;
+			// left: 0;
+			width: 960px;
+		}
+		span {
+			display: none;
+			@include breakpoint(958px) {
+				display: block;
+			}
+		}
+	}
+	.video-wrapper {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: calc(100% - #{$top-bar-height});
+		.video-container {
+			@include transition(opacity 1s ease-in-out);
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			// pointer-events: none;
+		}
+
+	}
+	.play-video-button {
+		#icon-play {
+			// Becose safari is hidding the icon when the filter is applied
+			// -webkit-filter: drop-shadow( 0 0 10px rgba(0, 0, 0, 0.6) );
+   //          filter: drop-shadow( 0 0 10px rgba(0, 0, 0, 0.6) );
+		}
+		opacity: 0;
+		background: none;
+		outline: none;
+		border: none;
+		@include transition(all 0.3s ease-in-out);
+		span {
+			font-size: 16px;
+			color: white;
+			display: block;
+
+		}
+
+	}
+	&.video-ready {
+		.play-video-button {
+			@include transform(scale(1));
+			@include transition(opacity 0.3s ease-in-out);
+			opacity: 1;
+		}
+	}
+	&.video-active {
+		//background: black;
+		.video-wrapper {
+			z-index: 1!important;
+			.video-container {
+				@include transition(opacity 1s ease-in-out);
+				opacity: 1;
+				pointer-events: auto!important;
+
+			}
+
+		}
+		.play-video-button {
+			@include transition(all 0.15s ease-in-out);
+			opacity: 0;
+			@include transform(scale(20));
+		}
+	}
+	&.parallax .video-wrapper,
+	&:not(.video-active) .video-wrapper.played-once {
+		height: 100%;
+		z-index: -1;
+		.video-container {
+			pointer-events: none;
+		}
+	}
+	.content {
+		p {
+
+ 			&:first-letter {
+ 				font-family: "main-header";
+ 				font-size: 130px;
+ 				line-height: 124px;
+ 				margin-bottom: -25px;
+ 				padding-right: 15px;
+ 				font-weight: 800;
+ 				color: $black;
+ 				float: left;
+ 				display: block;
+ 			}
+ 			@include breakpoint(950px) {
+ 				@include column-count(2);
+				@include column-gap(40px);
+ 				//@include column-rule(3px solid $black);
+ 				text-align: justify;
+ 			}
+		}
+	}
+
+}
+
+#next-performances {
+	header {
+		background-image: url('/images/background/sections/migue_new_1.jpg');
+	}
+	&.parallax {
+		background-image: url('/images/background/sections/migue_new_1.jpg');
+		header {
+			background: none;
+		}
+
+	}
+	// @include ipad-landscape {
+	// 	header {
+	// 		background-image: url('/images/background/sections/last-record.jpg');
+	// 		background-size: cover;
+	// 	}
+	// }
+}
+
+#discography {
+	header {
+		background-image: url('/images/background/sections/leaving.jpg');
+	}
+	&.parallax {
+		background-image: url('/images/background/sections/leaving.jpg');
+		header {
+			background: none;
+		}
+
+	}
+	// @include ipad-landscape {
+	// 	header {
+	// 		background-image: url('/images/background/sections/leaving.jpg');
+	// 		background-size: cover;
+	// 	}
+	// }
+	&.alt {
+		article {
+			overflow: visible;
+			padding: 0;
+			@include box-shadow(none);
+			.content {
+				padding: 0;
+				@include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.9));
+				@include small-desktop {
+					width: 100%;
+				}
+				& + blockquote {
+					border: none;
+					background-color: $footer-bg;
+					&, & p {
+						color: $footer-font-color;
+					}
+					p:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		ul.records {
+			margin: 0;
+		}
+	}
+}
+
+
+
+
+//PERFORMANCES STYLES
+
+#next-performances {
+
+	time {
+		//float: left;
+		display: block;
+		@include breakpoint(450px) {
+			display: inline-block;
+			vertical-align: top;
+		}
+		@include breakpoint(650px) {
+			width: 33%;
+			text-align: right;
+		}
+	}
+}
+.day {
+	margin: 0;
+	padding: 0;
+	//@extend .big-number;
+	color: $black;
+
+
+	font-size: 50px;
+    background: white;
+    line-height: 40px;
+    @include breakpoint(500px) {
+    	font-size: 75px;
+    	line-height: 55px;
+    }
+    @include breakpoint(600px) {
+    	font-size: 100px;
+    	line-height: 75px;
+    }
+
+}
+.year {
+	//@extend .huge-number;
+	font-size: 60px;
+	color: $lightest-gray;
+	text-align: right;
+	margin: 0;
+	line-height: 60px;
+	@include breakpoint(500px) {
+		font-size: 75px;
+		line-height: 75px;
+	}
+	@include breakpoint(600px) {
+		font-size: 120px;
+    	line-height: 91px;
+	}
+
+}
+.month {
+	@extend .mid-headline-text;
+	font-size: 30px;
+	color: $black;
+	margin-top: 12px;
+	margin-bottom: 0px;
+	line-height: 30px;
+	@include breakpoint(600px) {
+    	margin-bottom: 30px;
+    	font-size: 42px;
+    	line-height: 42px;
+    }
+}
+
+.performance-info {
+	@extend .body-text;
+	//reenable line-height: ms(0.5);
+	@include box-sizing(border-box);
+	min-height: 55px;
+	padding: 5px 0 5px $small-padding;
+	margin-left: 11 px;
+	border-left: 3px solid $black;
+
+	@include breakpoint(450px) {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 0 0 10px;
+	}
+	// @include breakpoint(500px) {
+ //    	min-height:55px;
+ //    }
+    @include breakpoint(600px) {
+    	min-height: 75px;
+    }
+    @include breakpoint(650px) {
+    	width: 66%;
+    	padding: 5px 0 5px 15px;
+    }
+    .group {
+    	display: block;
+    	@extend .small-headline-text;
+		line-height: 1;
+	}
+}
+
+.address {
+	display: inline;
+}
+.performance {
+	@include box-sizing(border-box);
+	margin-bottom: 20px;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	.name {
+		font-style: italic;
+		margin-top: 7px;
+	}
+	@include breakpoint(600px) {
+    	margin-bottom: 30px;
+    }
+}
+.location {
+	margin-bottom: 3px;
+}
+.city {
+	@extend .small-headline-text;
+	line-height: 1;
+}
+.place {
+	&:before {
+		content: " - ";
+	}
+}
+.country, .program {
+	color: $mid-gray;
+}
+.country {
+	//border-left: 1px solid $mid-gray;
+}
+//Records style
+
+// .records {
+// 	@include clearfix;
+// 	h3 {
+// 		a{
+// 			text-decoration: none;
+// 		}
+// 	}
+
+// 	.record {
+// 		@include clearfix;
+// 		margin: 0;
+// 		float: left;
+// 		width: 100%;
+// 		position: relative;
+// 		@include transition(all 0.2s ease-in-out);
+// 		@include breakpoint(400px) {
+// 			width: 50%;
+// 		}
+// 		@include breakpoint(750px) {
+// 			width: 33.33%;
+// 		}
+// 		img {
+// 			width: 100%;
+// 			display: block;
+// 			//@include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+// 		}
+
+// 	}
+// 	.record-info {
+// 		//display: none;
+// 		@include box-sizing(border-box);
+// 		padding: 7%;
+// 		position: absolute;
+// 		top: 100%;
+// 		left: 0;
+// 		bottom: 0;
+// 		right: 0;
+// 		background-color: rgba(255,255,255, 0.8);
+// 		z-index: 101;
+// 		margin-bottom: -4px;
+// 		@include transition(all 0.2s ease-in-out);
+// 		//border-top: 1px solid white;
+// 		h3	 {
+
+// 		}
+// 		h4 {
+
+// 		}
+// 		span {
+
+// 		}
+
+
+// 	}
+// }
+
+.records {
+	$record-animation-duration: 0.3s;
+	@include clearfix;
+	background: $footer-bg;
+	h3 {
+		a{
+			text-decoration: none;
+		}
+	}
+
+	.record {
+		@include clearfix;
+		@include box-sizing(border-box);
+		border-top: 2px solid $footer-bg;
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		position: relative;
+		@include transition(all $record-animation-duration ease-in-out);
+		&:before {
+			content: "";
+			display: block;
+			padding-top: 87%; 	/* initial ratio of 1:1*/
+		}
+		@include breakpoint(400px) {
+			width: 50%;
+			&:nth-child(odd) {
+				border-right: 2px solid $footer-bg;
+			}
+		}
+		@include breakpoint(750px) {
+			//padding: 2px 0 0 2px;
+			width: 25%;
+			border: none!important;
+			float: right;
+			.image-container {
+				border: 1px solid $footer-bg;
+			}
+			&:first-child {
+				width: 50%;
+				float: left;
+				.record-info .record-title {
+					font-size: 44px;
+				}
+			}
+		}
+
+		@include breakpoint(1450px) {
+			width: 16.66666%;
+			&:first-child {
+				width: 33.333333%;
+			}
+		}
+		.image-container {
+			position:  absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			// @include transform(scale(1));
+			// @include transition(all $record-animation-duration ease-in-out);
+		}
+		.record-image {
+			@include filter(blur(0));
+			width: 100%;
+			display: block;
+			@include transition(all $record-animation-duration ease-in-out);
+			//@include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+		}
+		.record-info {
+			//display: none;
+			@include box-sizing(border-box);
+			padding: 7%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: trasnparent;
+			z-index: 101;
+			margin-bottom: -4px;
+			@include transition(background-color $record-animation-duration ease-in-out);
+			.record-title, .group, .date {
+				color: white;
+				font-style: italic;
+				font-weight: 200;
+				margin: 0;
+				@include transition(all $record-animation-duration ease-in-out);
+			}
+			.date {
+				display: block;
+				@include transition(all $record-animation-duration*1.2 ease-in-out $record-animation-duration/6);
+			}
+			.record-title {
+				font-size: 33px;
+
+				font-style: normal;
+				font-weight: 800;
+				margin-bottom: 13px;
+				line-height: 0.95;
+				@include transform(translateX(-110%));
+				@include breakpoint(400px) {
+					font-size: 22px;
+				}
+				@include breakpoint(545px) {
+					font-size: 33px;
+				}
+
+				@include breakpoint(750px) {
+					font-size: 22px;
+
+				}
+
+				@include breakpoint(1150px) {
+					font-size: 33px;
+				}
+
+				@include breakpoint(1450px) {
+					font-size: 22px;
+				}
+
+
+			}
+			.group, .date {
+				@include transform(translateX(110%));
+			}
+			.links {
+				position: absolute;
+				bottom: 7%;
+				left: 0;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+			.record-link {
+				a span {text-indent: -99999px;}
+				display: inline-block;
+				width: 15%;
+				position: relative;
+				margin: 0 5%;
+				@include transform(translateY(200px));
+				&:before {
+					content: "";
+					display: block;
+					padding-top: 100%; 	/* initial ratio of 1:1*/
+				}
+
+			}
+			.spotify a, .itunes a, .amazon a {
+				display: block;
+				background-size: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+			.spotify {
+				@include transition(all $record-animation-duration ease-in-out);
+				a{
+					//background-image: url($spotify-logo);
+				}
+			}
+			.itunes {
+				@include transition(all $record-animation-duration*1.2 ease-in-out $record-animation-duration/6);
+				a{
+					//background-image: url($apple-logo);
+				}
+			}
+			.amazon {
+				@include transition(all $record-animation-duration*1.4 ease-in-out $record-animation-duration/3);
+				a{
+					//background-image: url($amazon-logo);
+				}
+			}
+
+		}
+		&:hover {
+			.record-info {
+				background-color: rgba(0,0,0,0.5);
+				.record-title,
+				.group,
+				.date {
+					@include transform(translateX(0));
+				}
+				.record-link {
+					@include transform(translateY(0));
+				}
+			}
+			// .image-container {
+			// 	@include transform(scale(2));
+			// 	@include transition(all $record-animation-duration*5 ease-in-out);
+			// }
+			img {
+				@include filter(blur(16px));
+				//@include transition($record-animation-duration*3 all $record-animation-duration*6 ease-in-out);
+				// @include transition-property(all);
+				// @include transition-delay($record-animation-duration*3);
+				// @include transition-duration($record-animation-duration*6);
+				// @include transition-timing-function(ease-in-out);
+			}
+		}
+	}
+}
+
+.record:hover {
+	.record-info {
+
+		//display: block;
+		// -webkit-transform: translate(0px,-100%);
+		// -moz-transform: translate(0px,-100%);
+		// -o-transform: translate(0px,-100%);
+		// transform: translate(0px,-100%);
+		// top: 0;
+		// @include transition(all 0.2s ease-in-out);
+		// &:after {
+		// 	top: 0;
+		// }
+	}
+}
+
+
+
+
+
+footer {
+
+	background-color: $footer-bg;
+	.content {
+		padding: 20px 0;
+		@include breakpoint(650px) {
+			display: table;
+			margin: 0 auto;
+		}
+	}
+	.social {
+		width: 300px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		@include breakpoint(650px) {
+			display: inline-flex;
+		}
+		a {
+			position: relative;
+			display: inline-block;
+			width: $social-button-size;
+			height: $social-button-size;
+			border-radius: 50%;
+			text-align: center;
+			margin: 0;
+			padding: $social-button-size/3;
+			box-shadow: 0px 0px 0px 50px rgba(255, 255, 255, 0);
+			@include transition(all $link-transition-duration ease-in-out);
+
+			#facebook,
+			#twitter,
+			#youtube {
+				fill: $footer-font-color;
+				@include transition(fill $link-transition-duration ease-in-out); }
+
+			&:hover {
+				box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+				@include transition(all $link-transition-duration ease-in-out);
+				background: $footer-font-color;
+				#facebook,
+				#twitter,
+				#youtube {
+					fill: $footer-bg;
+					@include transition(fill $link-transition-duration ease-in-out);
+				}
+
+			}
+		}
+	}
+	.contact-info {
+		text-align: center;
+		margin-top: 10px;
+		@include breakpoint(650px) {
+			display: inline-block;
+			padding-left: 55px;
+		}
+		.email,
+		.phone {
+			display: block;
+			margin-bottom: 5px;
+			color: $footer-font-color;
+			text-decoration: none;
+			&:visited {
+				color: $footer-font-color;
+			}
+		}
+		#phone-icon,
+		#mail-icon {
+			width: 13px;
+			height: 13px;
+			display: inline-block;
+    		vertical-align: middle;
+		}
+	}
+
+}
+
+$color: #fff;	  // background color
+$animation: $menu-animation-time;	// animation speed
+$scale: 0.5;
+
+.hamburglar {
+  transform: scale($scale);
+  float: right;
+  position: relative;
+  display: block;
+      width: 61px;
+    height: 40px;
+  // background: $blue;
+  -webkit-touch-callout: none;
+	user-select: none;
+}
+
+// transition mask
+.path-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 68px;
+  width: 68px;
+  // two masks because... browser support.
+  mask: url(#mask);
+  -webkit-mask-box-image: url(https://raygun.io/upload/mask.svg);
+}
+
+.animate-path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 68px;
+  height: 68px;
+}
+
+// what this does is create a small square that I then rotate behind an svg mask, giving the apparence of the line animating
+.path-rotation {
+  height: 34px;
+  width: 34px;
+  margin: 34px 34px 0 0;
+  transform: rotate(0deg);
+  transform-origin: 100% 0;
+  &:before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 34px;
+    margin: 0 4px 0 0;
+    background: $color;
+  }
+}
+
+// box rotation animation
+@keyframes rotate-out {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-in {
+  0% {
+    transform: rotate(360deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// offset moves
+// dasharray is the dash size
+// need to be able to control dash space size.
+
+.hamburglar.is-open {
+  .path {
+    animation: dash-in $animation linear normal;
+    animation-fill-mode:forwards;
+  }
+  .animate-path {
+    animation: rotate-in $animation linear normal;
+    animation-fill-mode:forwards;
+  }
+}
+
+.hamburglar.is-closed {
+  .path {
+    animation: dash-out $animation linear normal;
+    animation-fill-mode:forwards;
+  }
+  .animate-path {
+    animation: rotate-out $animation linear normal;
+    animation-fill-mode:forwards;
+  }
+}
+
+.path {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  stroke-linejoin: round;
+}
+
+@keyframes dash-in {
+  0% {
+    stroke-dashoffset: 240;
+  }
+  40% {
+    stroke-dashoffset: 240;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dash-out {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 240;
+  }
+  100% {
+    stroke-dashoffset: 240;
+  }
+}
+
+
+
+// All good burgers need filling!
+
+.burger-icon {
+  position: absolute;
+  padding: 20px 16px;
+  height: 68px;
+  width: 68px;
+}
+
+.burger-container {
+  position: relative;
+  height: 28px;
+  width: 36px;
+}
+
+.burger-bun-top,
+.burger-bun-bot,
+.burger-filling {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 36px;
+  border-radius: 2px;
+  background: $color;
+}
+
+.burger-bun-top {
+  top: 0;
+  transform-origin: 34px 2px;
+}
+
+.burger-bun-bot {
+  bottom: 0;
+  transform-origin: 34px 2px;
+}
+//.burger-filling {
+//  @include transition(all,($animation/2.5),ease-in-//out);
+//}
+// relative parent is the button
+.burger-filling {
+  top: 12px;
+}
+
+
+
+
+
+// burger ring container
+.burger-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 68px;
+  height: 68px;
+}
+
+.svg-ring {
+  width: 68px;
+  height: 68px;
+}
+
+
+// bun animations
+.hamburglar.is-open {
+  .burger-bun-top {
+    animation: bun-top-out $animation linear normal;
+    animation-fill-mode:forwards;
+  }
+  .burger-bun-bot {
+    animation: bun-bot-out $animation linear normal;
+    animation-fill-mode:forwards;
+  }
+}
+.hamburglar.is-closed {
+  .burger-bun-top {
+    animation: bun-top-in $animation linear normal;
+    animation-fill-mode:forwards;
+  }
+  .burger-bun-bot {
+    animation: bun-bot-in $animation linear normal;
+    animation-fill-mode:forwards;
+  }
+}
+
+@keyframes bun-top-out {
+  0% {
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    top: 0;
+    transform: rotate(15deg);
+  }
+  80% {
+    left: -5px;
+    top: 0;
+    transform: rotate(-60deg);
+  }
+  100% {
+    left: -5px;
+    top: 1px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes bun-bot-out {
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    transform: rotate(-15deg);
+  }
+  80% {
+    left: -5px;
+    transform: rotate(60deg);
+  }
+  100% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+}
+
+
+@keyframes bun-top-in {
+  0% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(-45deg);
+  }
+  20% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(-60deg);
+  }
+  80% {
+    left: 0;
+    bot: 0;
+    transform: rotate(15deg);
+  }
+  100% {
+    left: 0;
+    bot: 1px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bun-bot-in {
+  0% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+  20% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(60deg);
+  }
+  80% {
+    left: 0;
+    bot: 0;
+    transform: rotate(-15deg);
+  }
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+
+
+// burger filling
+.hamburglar.is-open {
+  .burger-filling {
+    animation: burger-fill-out $animation linear normal;
+    animation-fill-mode:forwards;
+  }
+}
+
+.hamburglar.is-closed {
+  .burger-filling {
+    animation: burger-fill-in $animation linear normal;
+    animation-fill-mode:forwards;
+  }
+}
+
+@keyframes burger-fill-in {
+  0% {
+    width: 0;
+    left: 36px;
+  }
+  40% {
+    width: 0;
+    left: 40px;
+  }
+  80% {
+    width: 36px;
+    left: -6px;
+  }
+  100% {
+    width: 36px;
+    left: 0px;
+  }
+}
+
+@keyframes burger-fill-out {
+  0% {
+    width: 36px;
+    left: 0px;
+  }
+  20% {
+    width: 42px;
+    left: -6px;
+  }
+
+  40% {
+    width: 0;
+    left: 40px;
+  }
+
+  100% {
+    width: 0;
+    left: 36px;
+  }
+}

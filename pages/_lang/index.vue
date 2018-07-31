@@ -1,85 +1,74 @@
 <template>
   <div>
-    <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        miguelrincon
-      </h1>
-      <h2 class="subtitle">
-        {{ $t('index.pilla') }} {{$store.locale}}
-      </h2>
-      <div class="links">
-        <nuxt-link class="button--green" to="/es-ES">About</nuxt-link>
-      </div>
-    </div>
-  </section>
-  <section>
-    <perfo-list :perfoes="perfoes"/>
-  </section>
+    <section id="front-page">
+      <header>
+        <h2>Miguel Rincón</h2>
+      </header>
+      <article>
+        <div class="content">
+          <p>
+            <vue-markdown>{{ bio }}</vue-markdown>
+          </p>
+        </div>
+      </article>
+    </section>
+    <section id="next-performances">
+      <header>
+        <h2>NExt perfoes</h2>
+      </header>
+      <article>
+        <perfo-list class="content" :perfoes="perfoes"/>
+      </article>
+    </section>
   </div>
 </template>
 <style lang="scss">
 
-  .container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .title {
-    font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-    display: block;
-    font-weight: 300;
-    font-size: 100px;
-    color: #35495e;
-    letter-spacing: 1px;
-  }
-
-  .subtitle {
-    font-weight: 300;
-    font-size: 42px;
-    color: #526488;
-    word-spacing: 5px;
-    padding-bottom: 15px;
-  }
-
-  .links {
-    padding-top: 15px;
+  section {
+    > header {
+      height: 100vh;
+    }
   }
 
 </style>
 
 <script>
-  import AppLogo from '~/components/AppLogo.vue'
+  import VueMarkdown from 'vue-markdown'
   import {createClient} from '~/lib/contentful.js'
   import perfoMap from '~/utils/perfoMap.js'
   import PerfoList from '~/components/perfoes/perfoList/PerfoList.vue'
+  import fitToViewport from '~/directives/fitToViewport'
 
   const API = createClient()
 
 
   export default {
     components: {
-      AppLogo,
+      VueMarkdown,
       PerfoList
+    },
+    directives: {
+      fitToViewport: fitToViewport
     },
     fetch({ store }) {
         store.commit('increment')
       },
       asyncData: async ({store}) => {
-        const { items } = await API.getEntries({
+        const perfoes = await API.getEntries({
           'content_type': 'performance',
           locale: store.state.locale,
           order: 'fields.date',
-          'fields.date[gte]': new Date(),
+          // 'fields.date[gte]': new Date(),
           include: 3
         })
-        console.log('lositems', items);
+        const bio = await API.getEntries({
+          'content_type': 'bio',
+          locale: store.state.locale,
+        })
+        console.log('biobio', bio);
         return {
-          perfoes: items.map(perfoMap)
+          perfoes: perfoes.items.map(perfoMap),
+          bio: bio.items[0].fields.text
         }
       }
   }

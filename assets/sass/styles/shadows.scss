@@ -1,0 +1,16 @@
+$default-text-shadow-color: white;
+$default-text-shadow-blur: 0;
+$default-text-shadow-v-offset: 1px;
+$default-text-shadow-h-offset: 1px;
+ 
+@import "compass/css3";
+
+.inset-white-text-shadow {
+	@include single-text-shadow;
+}
+.diffuse-white-text-shadow {
+	@include text-shadow(white 1px 1px 0, white -1px -1px 0, white 1px -1px 0, white -1px 1px 0, white 0 1px 0, white 0 -1px 0, white 1px 0 0, white -1px 0 0);
+}
+.no-text-shadow {
+	@include single-text-shadow(none);	
+}

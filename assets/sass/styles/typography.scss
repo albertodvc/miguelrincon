@@ -1,0 +1,81 @@
+@import "compass/css3";
+@import "styles/colors";
+@import "modularscale";
+
+$base-size: 16px;
+$ratio: golden();
+
+$modularscale: (
+  base: 1em,
+  ratio: 1.6180334
+);
+
+@font-face {
+    font-family: "main-header";
+    src: url('/css/fonts/miguel-rincon-hedaer.eot');
+    src: url('/css/fonts/miguel-rincon-hedaer.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/miguel-rincon-hedaer.woff') format('woff'),
+         url('/css/fonts/miguel-rincon-hedaer.ttf') format('truetype'),
+         url('/css/fonts/miguel-rincon-hedaer.svg#opificioregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.miguel-rincon-typeface {
+	font: {
+		family: "main-header", sans-serif;
+	}
+	font-weight: normal!important;
+}
+
+
+.body-text {
+	font: {
+		family: "Myriad Pro", Myriad, sans-serif;
+		size: 16px;
+	}
+	line-height: 28px;
+}
+
+.big-headline-text, .mid-headline-text, .small-headline-text {
+	font-family: "Myriad Pro", Myriad, sans-serif;
+}
+
+.big-headline-text {
+	font-size: 90px;
+	line-height: 80px;
+	font-weight: bold;
+}
+
+@mixin big-headline-text() {
+	font-size: 90px;
+	line-height: 80px;
+	font-weight: bold;
+}
+.mid-headline-text {
+	font-size: ms(2);
+	line-height: ms(2);
+	font-weight: bold;
+}
+.small-headline-text {
+	font-size: ms(1);
+	line-height: ms(1);
+
+}
+.quote-text {
+	font: {
+		family: "Myriad Pro", Myriad, sans-serif;
+		size: 16px;
+		style: italic;
+	}
+	line-height: 24px;	
+}
+.big-number {
+	font-size: ms(4);
+	line-height: 80px;
+}
+.huge-number {
+	font-size: 120px;
+	line-height: 120px;	
+}
+

@@ -1,0 +1,21 @@
+@import "styles/colors.scss";
+
+.paper-background {
+	background-image: url('/images/background/paper.png');
+}
+.light-sepia-background {
+	background-image: url('/images/background/light-sepia.png');
+}
+.mid-sepia-background {
+	background-image: url('/images/background/mid-sepia.png');
+}
+.mid-gray-background {
+	background-image: url('/images/background/mid-gray.png');
+}
+.main-background {
+	background: $main-background-color;
+}
+.lighter-background {
+	background: rgba(255, 255, 255, 0.5);
+}
+
