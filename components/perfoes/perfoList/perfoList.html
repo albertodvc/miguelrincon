@@ -11,7 +11,8 @@
         <ul class="perfo-list__perfoes $$ month-performances">
           <li class="perfo-list__perfo $$ performance"
             v-for="perfo in month.perfoes"
-            :key="perfo._id">
+            :key="perfo._id"
+            itemprop="event" itemscope itemtype="http://schema.org/MusicEvent">
             <perfo class="perfo-list__perfo__component"
               :perfo="perfo"/>
           </li>
