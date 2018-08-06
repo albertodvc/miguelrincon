@@ -7,20 +7,26 @@ var odb = JSON.parse(fs.readFileSync('scripts/db.json', 'utf8'))
 var perfoes = JSON.parse(fs.readFileSync('scripts/perfoes.json', 'utf8'))
 var groups = JSON.parse(fs.readFileSync('scripts/groups.json', 'utf8'))
 var programs = JSON.parse(fs.readFileSync('scripts/programs.json', 'utf8'))
-
+var records = JSON.parse(fs.readFileSync('scripts/records.json', 'utf8'))
 
 
 const client = contentful.createClient({
   accessToken: process.env.CTF_M_TOKEN
 })
 
+// records = linkRecords(odb.records, groups, odb.groups_records)
+// fs.writeFileSync('scripts/records.json', JSON.stringify(records, null, 2))
+
 
 client.getSpace(process.env.CTF_SPACE_ID)
-.then( space => createPerfoes(space, perfoes))
+.then( space => {
+
+})
 .then( result => {
   console.log('lets write', result)
 })
 .catch( err => console.log('JORROR', err))
+
 
 
 function createGroups(groups) {
@@ -136,6 +142,94 @@ function createPerfoes(space, perfoes) {
           }
         }}
       }
+    })
+  }))
+}
+
+function createImage(img) {
+
+}
+
+function linkRecords(records, groups, groups_records) {
+  return records.map( record => {
+    return Object.assign({}, record, {
+      group_id: groups
+        .find( group => {
+          return group.id === groups_records.find( entry => entry.record_id === record.id).group_id
+        })._id
+      })
+  })
+}
+
+function createRecords(space, records) {
+  return Promise.all(records.map( (record, idx, records) => {
+    return space.createUpload({
+      file: fs.readFileSync('scripts/img/'+record.img),
+      contentType: 'image/jpeg',
+      fileName: record.img
+    })
+    .then( upload => {
+      return space.createAsset({
+        fields: {
+          title: {
+            'en-US': record.title,
+            'es-ES': record.title
+          },
+          file: {
+            'en-US': {
+              fileName: record.img,
+              contentType: 'image/jpeg',
+              uploadFrom: {
+                sys: {
+                  type: 'Link',
+                  linkType: 'Upload',
+                  id: upload.sys.id
+                }
+              }
+            },
+            'es-ES': {
+              fileName: record.img,
+              contentType: 'image/jpeg',
+              uploadFrom: {
+                sys: {
+                  type: 'Link',
+                  linkType: 'Upload',
+                  id: upload.sys.id
+                }
+              }
+            }
+          }
+        }
+      })
+    })
+    .then(asset => asset.processForAllLocales())
+    .then(asset => asset.publish())
+    .then( asset => {
+      space.createEntry('record', {
+        fields: {
+          title: {'en-US': record.title},
+          subtitle: {'en-US': record.subtitle},
+          date: {'en-US': new Date(record.date)},
+          itunes: {'en-US': record.itunes},
+          spotify: {'en-US': record.spotify},
+          amazon: {'en-US': record.amazon},
+          colaboration: {'en-US': (record.colaboration === '1')? true : false},
+          group: {'en-US': {
+            sys: {
+              id: record.group_id,
+              type: 'Link',
+              linkType: 'Entry'
+            }
+          }},
+          image: {'en-US': {
+            sys: {
+              id: asset.sys.id,
+              type: 'Link',
+              linkType: 'Asset'
+            }
+          }}
+        }
+      })
     })
   }))
 }
