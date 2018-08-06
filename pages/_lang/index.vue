@@ -20,6 +20,14 @@
         <perfo-list class="content" :perfoes="perfoes"/>
       </article>
     </section>
+    <section id="discography" class="alt">
+      <header>
+        <h2>REcords</h2>
+      </header>
+      <article>
+        <record-list class="content" :records="records"/>
+      </article>
+    </section>
   </div>
 </template>
 <style lang="scss">
@@ -36,7 +44,9 @@
   import VueMarkdown from 'vue-markdown'
   import {createClient} from '~/lib/contentful.js'
   import perfoMap from '~/utils/perfoMap.js'
+  import recordMap from '~/utils/recordMap.js'
   import PerfoList from '~/components/perfoes/perfoList/PerfoList.vue'
+  import RecordList from '~/components/RecordList.vue'
 
   const API = createClient()
 
@@ -44,7 +54,8 @@
   export default {
     components: {
       VueMarkdown,
-      PerfoList
+      PerfoList,
+      RecordList
     },
     fetch({ store }) {
         store.commit('increment')
@@ -61,10 +72,16 @@
           'content_type': 'bio',
           locale: store.state.locale,
         })
-        console.log('biobio', bio);
+        const records = await API.getEntries({
+          'content_type': 'record',
+          locale: store.state.locale,
+          include: 3
+        })
         return {
           perfoes: perfoes.items.map(perfoMap),
+          records: records.items.map(recordMap),
           bio: bio.items[0].fields.text
+
         }
       }
   }
