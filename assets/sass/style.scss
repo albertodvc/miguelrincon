@@ -589,7 +589,7 @@ article {
 	// }
 }
 
-#discography {
+#records {
 	header {
 		background-image: url('/images/background/sections/leaving.jpg');
 	}
@@ -600,39 +600,31 @@ article {
 		}
 
 	}
-	// @include ipad-landscape {
-	// 	header {
-	// 		background-image: url('/images/background/sections/leaving.jpg');
-	// 		background-size: cover;
-	// 	}
-	// }
-	&.alt {
-		article {
-			overflow: visible;
-			padding: 0;
-			@include box-shadow(none);
-			.content {
-				padding: 0;
-				@include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.9));
-				@include small-desktop {
-					width: 100%;
-				}
-				& + blockquote {
-					border: none;
-					background-color: $footer-bg;
-					&, & p {
-						color: $footer-font-color;
-					}
-					p:last-child {
-						margin-bottom: 0;
-					}
-				}
-			}
-		}
-		ul.records {
-			margin: 0;
-		}
-	}
+  article {
+    overflow: visible;
+    padding: 0;
+    @include box-shadow(none);
+    .content {
+      padding: 0;
+      @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.9));
+      @include small-desktop {
+        width: 100%;
+      }
+      & + blockquote {
+        border: none;
+        background-color: $footer-bg;
+        &, & p {
+          color: $footer-font-color;
+        }
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  ul.records {
+    margin: 0;
+  }
 }
 
 
