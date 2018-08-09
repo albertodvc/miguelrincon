@@ -1,7 +1,7 @@
 <template>
   <ul class="record-list && records">
     <li
-      v-for="record in records"
+      v-for="record in parameters.records"
       :key="record.title">
       <record :record="record"/>
     </li>
@@ -16,6 +16,6 @@
     components: {
       Record
     },
-    props: ['records']
+    props: ['parameters']
   }
 </script>
