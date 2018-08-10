@@ -10,7 +10,6 @@
           <component :is="network.key"/>
           </a>
       </div>
-
       <div class="contact-info">
         <span class="phone">
           <img svg-inline class="phone-icon" src="./icons/phone.svg" />

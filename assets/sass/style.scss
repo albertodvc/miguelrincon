@@ -255,7 +255,7 @@ section{
 				top: 50%;
 				width: 960px;
 				span.miguel {
-					ont-size: 137px;
+					font-size: 137px;
 					margin-bottom: 40px;
 				}
 			}
@@ -378,16 +378,16 @@ article {
 
 
 
-#front-page {
+#frontPage {
 
 	header,
 	&.parallax {
-		background-image: url('/images/background/sections/guitarra_1.jpg');
+		background-image: url('~/assets/images/sections/guitarra_1.jpg');
 		&:before {
 			content: "";
 			@include box-sizing(border-box);
 			display: block;
-			background: inline-image('/background/sections/guitarra_1_load.jpg');
+			background: inline-image('~/assets/images/sections/guitarra_1_load.jpg');
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -458,7 +458,7 @@ article {
 	// 	header {
 	// 		background: none;
 	// 	}
-	// 	background-image: url('/images/background/sections/guitarra_1.jpg');
+	// 	background-image: url('~/assets/images/sections/guitarra_1.jpg');
 	// 	background-position: 28% center;
 	// }
 	//@include transition(background 4s ease-in-out);
@@ -570,12 +570,12 @@ article {
 
 }
 
-#next-performances {
+#performances {
 	header {
-		background-image: url('/images/background/sections/migue_new_1.jpg');
+		background-image: url('~/assets/images/sections/migue_new_1.jpg');
 	}
 	&.parallax {
-		background-image: url('/images/background/sections/migue_new_1.jpg');
+		background-image: url('~/assets/images/sections/migue_new_1.jpg');
 		header {
 			background: none;
 		}
@@ -583,7 +583,7 @@ article {
 	}
 	// @include ipad-landscape {
 	// 	header {
-	// 		background-image: url('/images/background/sections/last-record.jpg');
+	// 		background-image: url('~/assets/images/sections/last-record.jpg');
 	// 		background-size: cover;
 	// 	}
 	// }
@@ -591,10 +591,10 @@ article {
 
 #records {
 	header {
-		background-image: url('/images/background/sections/leaving.jpg');
+		background-image: url('~/assets/images/sections/leaving.jpg');
 	}
 	&.parallax {
-		background-image: url('/images/background/sections/leaving.jpg');
+		background-image: url('~/assets/images/sections/leaving.jpg');
 		header {
 			background: none;
 		}
