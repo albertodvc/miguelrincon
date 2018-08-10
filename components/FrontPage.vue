@@ -1,8 +1,8 @@
 <template>
 
-  <p>
+  <div>
     <vue-markdown>{{ parameters.bio }}</vue-markdown>
-  </p>
+  </div>
 
 </template>
 

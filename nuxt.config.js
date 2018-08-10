@@ -43,6 +43,12 @@ module.exports = {
   build: {
     extend(config) {
       for (const rule of config.module.rules) {
+        if (rule.loader && rule.loader === 'vue-loader') {
+          rule.options.loaders.html = {
+            loader: "img-svg-inline-loader",
+            options: {}
+          }
+        }
         if (rule.use) {
           for (const use of rule.use) {
             if (use.loader === 'sass-loader') {
