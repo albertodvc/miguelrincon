@@ -12,11 +12,11 @@ $modularscale: (
 
 @font-face {
     font-family: "main-header";
-    src: url('/css/fonts/miguel-rincon-hedaer.eot');
-    src: url('/css/fonts/miguel-rincon-hedaer.eot?#iefix') format('embedded-opentype'),
-         url('/css/fonts/miguel-rincon-hedaer.woff') format('woff'),
-         url('/css/fonts/miguel-rincon-hedaer.ttf') format('truetype'),
-         url('/css/fonts/miguel-rincon-hedaer.svg#opificioregular') format('svg');
+    src: url('~/assets/fonts/miguel-rincon-hedaer.eot');
+    src: url('~/assets/fonts/miguel-rincon-hedaer.eot?#iefix') format('embedded-opentype'),
+         url('~/assets/fonts/miguel-rincon-hedaer.woff') format('woff'),
+         url('~/assets/fonts/miguel-rincon-hedaer.ttf') format('truetype'),
+         url('~/assets/fonts/miguel-rincon-hedaer.svg#opificioregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -68,7 +68,7 @@ $modularscale: (
 		size: 16px;
 		style: italic;
 	}
-	line-height: 24px;	
+	line-height: 24px;
 }
 .big-number {
 	font-size: ms(4);
@@ -76,6 +76,6 @@ $modularscale: (
 }
 .huge-number {
 	font-size: 120px;
-	line-height: 120px;	
+	line-height: 120px;
 }
 

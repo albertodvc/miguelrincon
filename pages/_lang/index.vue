@@ -6,7 +6,7 @@
       :section="section.key"/>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 
   section {
     > header {
@@ -65,7 +65,7 @@
           {
             key: 'performances',
             params: {
-              performances: perfoes.items.map(perfoMap),
+              performances: perfoes.items.map(perfoMap).slice(0, 10),
               quote: quotes.items.find( quote => quote.fields.section === 'Performances').fields
             }
           },

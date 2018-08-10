@@ -1,0 +1,30 @@
+$small-desktop: 1110px;
+
+$ipad-landscape: 1024px;
+
+$tablet-portrait: 959px;
+
+
+@mixin ipad-landscape {
+  @media only screen and (max-device-width: $ipad-landscape) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (min-width: #{$small-desktop}) {
+    @content;
+  }
+}
+
+@mixin ipad-portrait {
+  @media (min-width: #{$tablet-portrait}) {
+    @content;
+  }
+}
+
+@mixin breakpoint($breakpoint) {
+  @media (min-width: #{$breakpoint}) {
+    @content;
+  }
+}

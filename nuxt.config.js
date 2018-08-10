@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 
-console.log("init", process.env.CTF_SPACE_ID)
-
 module.exports = {
   /*
   ** Headers of the page
@@ -25,9 +23,6 @@ module.exports = {
   /*
   ** Build configuration
   */
-  css: [
-    '@/assets/sass/style.scss'
-  ],
   router: {
     middleware: 'i18n'
   },
@@ -40,27 +35,45 @@ module.exports = {
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
   },
+
   build: {
-    extend(config) {
-      for (const rule of config.module.rules) {
-        if (rule.loader && rule.loader === 'vue-loader') {
-          rule.options.loaders.html = {
-            loader: "img-svg-inline-loader",
-            options: {}
+    /*
+    ** Run ESLint on save
+    */
+      extend (config, { isDev, isClient }) {
+        const vueLoader = config.module.rules.find(
+          ({loader}) => loader === 'vue-loader')
+        const { options: {loaders} } = vueLoader || { options: {} }
+        if (loaders) {
+          for (const loader of Object.values(loaders)) {
+            changeLoaderOptions(Array.isArray(loader) ? loader : [loader])
           }
         }
-        if (rule.use) {
-          for (const use of rule.use) {
-            if (use.loader === 'sass-loader') {
-              use.options = use.options || {};
-              use.options.includePaths = [
-                path.join(process.cwd(), 'node_modules', 'compass-mixins', 'lib'),
-                path.join(process.cwd(), 'node_modules', 'modularscale-sass', 'stylesheets')
-              ];
+        config.module.rules.forEach(rule => {
+          changeLoaderOptions(rule.use)
+          if (rule.loader && rule.loader === 'vue-loader') {
+            rule.options.loaders.html = {
+              loader: "img-svg-inline-loader",
+              options: {}
             }
           }
-        }
+        })
       }
-    },
+    }
+}
+
+function changeLoaderOptions(loaders) {
+  if (loaders) {
+    for (const loader of loaders) {
+      if (loader.loader === 'sass-loader') {
+        Object.assign(loader.options, {
+          includePaths: [
+            path.join(process.cwd(), 'node_modules', 'compass-mixins', 'lib'),
+            path.join(process.cwd(), 'node_modules', 'modularscale-sass', 'stylesheets'),
+            path.join(process.cwd(), "styles")
+          ]
+        })
+      }
+    }
   }
 }
