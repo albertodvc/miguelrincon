@@ -1,8 +1,12 @@
 <template>
 
-  <section :id="section" class="section parallax">
-    <header v-center-titles class="section__header">
-      <h2>{{ section }}</h2>
+  <section :id="section"
+    class="section"
+    v-parallax-container>
+    <header class="section__header">
+      <slot>
+        <h2 v-parallax>{{ section }}</h2>
+      </slot>
     </header>
     <article>
       <component class="content" :is="section" v-bind="{ parameters: parameters }"></component>
@@ -22,82 +26,11 @@
   import Performances from '~/components/Performances.vue'
   import Records from '~/components/Records.vue'
 
-  import throttle from 'lodash/fp/throttle'
-
-  var ViewPort = {
-    height: function() {
-      return (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
-    },
-    width: function() {
-      return (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
-    }
-  }
-
-
   export default {
     components: {
       FrontPage,
       Performances,
       Records
-    },
-    directives: {
-      centerTitles: {
-        // directive definition
-        inserted: function (el) {
-          var $title = el.children[0]
-          var center = () => {
-            var setCssProperties = (element, opacity, translate) => {
-              var styles = {}
-              if (typeof opacity != 'undefined' && opacity != null) {
-                styles['opacity'] = opacity
-              }
-              if (typeof translate != 'undefined' && translate != null) {
-                var value = 'translate3d(0px, ' + translate + 'px, 0px)'
-                // styles['-ms-transform'] = value
-                // styles['-webkit-transform'] = value
-                styles['transform'] = value
-              }
-              Object.keys(styles).forEach( style => element.style[style] = styles[style])
-            }
-
-            var viewportHeight = ViewPort.height()
-            var scrollPosition = window.scrollY
-            var offset = el.parentElement.offsetTop - scrollPosition
-            var titleStyle = window.getComputedStyle($title)
-            var margin = titleStyle.getPropertyValue('margin-top')
-            var parallaxRatio = 1.8
-
-
-
-            if (scrollPosition <= viewportHeight) {
-              if (titleStyle.getPropertyValue('opacity') <= 0) {
-                $title.classList.add('hidden')
-              } else {
-                $title.classList.remove('hidden')
-              }
-              setCssProperties($title, 1 - (scrollPosition / viewportHeight * 1.2), -scrollPosition / parallaxRatio)
-              // if ($(this).children('.video-wrapper').hasClass('active')) {
-              //   $(this).children('.video-wrapper').css(getCssProperties(1 - (scrollPosition / viewportHeight * 1.2)))
-              // }
-            } else {
-              if (titleStyle.getPropertyValue('opacity') <= 0) {
-                $title.classList.add('hidden')
-              } else {
-                $title.classList.remove('hidden')
-              }
-
-              if (-80 - (offset / parallaxRatio) >= -80) {
-                setCssProperties($title, 1 + offset / viewportHeight * 1.2, -offset / parallaxRatio)
-              } else {
-                setCssProperties($title, 1, 0)
-              }
-            }
-            console.log($title.textContent, viewportHeight, scrollPosition, offset, $title.style.transform)
-          }
-          center()
-          window.addEventListener("scroll", throttle(10, ()=> window.requestAnimationFrame(center)))
-        }
-      }
     },
     props: ['section', 'parameters']
   }
@@ -110,6 +43,171 @@
 @import "compass/utilities";
 @import "variables";
 @import "typography";
+@import "media_queries";
+
+section{
+	header {
+		@include box-sizing(border-box);
+		background-position: center center;
+		background-color: black;
+		background-size: cover;
+		position: relative;
+		height: $smal-section-header-height;
+		padding: 0 $small-padding;
+		width: 100%;
+
+		@include breakpoint(690px) {
+			height: $medium-section-header-height;
+		}
+		@include breakpoint(958px) {
+			height: 500px;
+		}
+
+		h2 {
+			text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+			text-transform: uppercase;
+			color: $white;
+			display: block;
+			font-size: 35px;
+			position: absolute;
+			bottom: $small-vertical-padding;
+			margin: 0;
+			line-height: 0.85;
+			margin-bottom: 10px;
+
+			span.miguel {
+				display: block;
+				font-family: "main-header";
+				font-weight: normal;
+				text-transform: none;
+
+			}
+
+			@include breakpoint(545px) {
+				font-size: 45px;
+			}
+			@include breakpoint(616px) {
+				font-size: 70px;
+			}
+			@include breakpoint(690px) {
+				&#front-page-title {
+					bottom: 92px;
+				}
+			}
+			@include breakpoint(958px) {
+				font-size: 80px;
+				span.miguel {
+					font-size: 110px;
+				}
+			}
+			@include breakpoint(1024px) {
+				font-size: 90px;
+				text-align: center;
+				line-height: 80px;
+				font-weight: bold;
+				left: 50%;
+				margin: -80px 0 0 -480px;
+				position: absolute;
+				//text-align: center;
+
+				top: 50%;
+				width: 960px;
+				span.miguel {
+					font-size: 137px;
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+	&.parallax-container {
+		background-attachment: fixed;
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+	}
+}
+
+section {
+	&:before {
+		opacity: 0;
+		content: "";
+		position: absolute;
+		@include transition(opacity $menu-animation-time ease-in-out);
+	}
+
+	&.menu-opened {
+		position: relative;
+		&:before {
+			position: absolute;
+			z-index: 90;
+			content: "";
+			height: 100%;
+			right: 0;
+			left: 0;
+			background: black;
+			opacity: 0.4;
+			@include transition(opacity $menu-animation-time ease-in-out);
+		}
+	}
+	@include breakpoint(958px) {
+		&:before {
+			content: none;
+
+		}
+	}
+}
+
+article {
+	@include clearfix;
+	background-color: white;
+	padding: 20px 0;
+	@include box-sizing(border-box);
+	@include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.9));
+	position: relative;
+	z-index: 10;
+	@include breakpoint(960px) {
+		padding: 60px 0;
+		.content {
+			padding-bottom: 60px;
+		}
+	}
+	.content {
+		@include box-sizing(border-box);
+		padding: 0 $small-padding;
+		width: 100%;
+		margin: 0;
+
+		padding-bottom: $small-vertical-padding;
+		@include breakpoint(960px) {
+			padding-bottom: 60px;
+		}
+
+		@include small-desktop {
+			width: 960px;
+			margin: 0 auto;
+			padding: 0 0 60px 0;
+		}
+	}
+	.content + blockquote {
+		@include box-sizing(border-box);
+		width: 100%;
+		border-top: 1px dashed $light-gray;
+		margin: 0;
+    padding: $small-padding/2 $small-padding 0 $small-padding;
+
+		@include breakpoint(700px) {
+			padding: $small-padding/2 0 0 0;
+			p {
+				width: 450px;
+				margin: 0 auto;
+			}
+		}
+		@include breakpoint(960px) {
+			padding-top: 40px;
+		}
+	}
+}
+
 
 
 .section {
@@ -122,7 +220,7 @@
     font-weight: 200;
 
     p:first-child {
-      @extend .quote-text;
+      @extend %quote-text;
 
       &::before {
         color: $lightest-gray;
@@ -140,9 +238,229 @@
     }
 
     p:last-child {
-      @extend .quote-text;
+      @extend %quote-text;
       font-weight: bold;
     }
+  }
+}
+
+#frontPage {
+
+	header,
+	&.parallax-container {
+		background-image: url('~/assets/images/sections/guitarra_1.jpg');
+		&:before {
+			content: "";
+			@include box-sizing(border-box);
+			display: block;
+			background: inline-image('~/assets/images/sections/guitarra_1_load.jpg');
+			position: absolute;
+			top: 0;
+			width: 100%;
+			left: 0;
+			background-repeat: no-repeat;
+    		background-position: center center;
+    		background-size: cover;
+    		z-index: 0;
+    		@include filter(blur(5px));
+    		@include transition(opacity 0.5s ease-in-out);
+    		opacity: 1;
+		}
+		&.img-loaded:before {
+			opacity: 0;
+		}
+	}
+	&.parallax-container {
+		&:before {
+			position: absolute;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+    		background-position: center center;
+    		background-size: cover;
+		}
+	}
+
+	header,
+	header:before,
+	&.parallax-container:before {
+		margin: 0;
+		padding: 0;
+		height: $smal-section-header-height + $top-bar-height;
+		padding-top: $top-bar-height;
+
+		@include breakpoint(690px) {
+			height: $medium-section-header-height + $top-bar-height;
+		}
+		@include breakpoint(958px) {
+			height: 500px + $top-bar-height;
+		}
+		@include breakpoint(1025px) {
+			height:100vh;
+		}
+	}
+	&.parallax-container {
+		header {
+			background: none;
+			padding: 0;
+			.video-wrapper {
+				position: fixed;
+			}
+			&:before {
+				content: none;
+				display: none;
+				opacity: 0;
+			}
+		}
+		@include breakpoint(1024px) {
+			h2 { position: fixed;}
+		}
+	}
+
+	h2 {
+		width: 100%;
+		text-align: center;
+		@include breakpoint(1024px) {
+			width: 960px;
+		}
+		span {
+			display: none;
+			@include breakpoint(958px) {
+				display: block;
+			}
+		}
+	}
+	.video-wrapper {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: calc(100% - #{$top-bar-height});
+		.video-container {
+			@include transition(opacity 1s ease-in-out);
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+
+	}
+	.play-video-button {
+		opacity: 0;
+		background: none;
+		outline: none;
+		border: none;
+		@include transition(all 0.3s ease-in-out);
+		span {
+			font-size: 16px;
+			color: white;
+			display: block;
+
+		}
+
+	}
+	&.video-ready {
+		.play-video-button {
+			@include transform(scale(1));
+			@include transition(opacity 0.3s ease-in-out);
+			opacity: 1;
+		}
+	}
+	&.video-active {
+		.video-wrapper {
+			z-index: 1!important;
+			.video-container {
+				@include transition(opacity 1s ease-in-out);
+				opacity: 1;
+				pointer-events: auto!important;
+
+			}
+
+		}
+		.play-video-button {
+			@include transition(all 0.15s ease-in-out);
+			opacity: 0;
+			@include transform(scale(20));
+		}
+	}
+	&.parallax-container .video-wrapper,
+	&:not(.video-active) .video-wrapper.played-once {
+		height: 100%;
+		z-index: -1;
+		.video-container {
+			pointer-events: none;
+		}
+	}
+	.content {
+		p {
+
+ 			&:first-letter {
+ 				font-family: "main-header";
+ 				font-size: 130px;
+ 				line-height: 124px;
+ 				margin-bottom: -25px;
+ 				padding-right: 15px;
+ 				font-weight: 800;
+ 				color: $black;
+ 				float: left;
+ 				display: block;
+ 			}
+ 			@include breakpoint(950px) {
+ 				@include column-count(2);
+				@include column-gap(40px);
+ 				text-align: justify;
+ 			}
+		}
+	}
+
+}
+
+#performances {
+	header {
+		background-image: url('~/assets/images/sections/migue_new_1.jpg');
+	}
+	&.parallax-container {
+		background-image: url('~/assets/images/sections/migue_new_1.jpg');
+		header {
+			background: none;
+		}
+
+	}
+}
+
+#records {
+	header {
+		background-image: url('~/assets/images/sections/leaving.jpg');
+	}
+	&.parallax-container {
+		background-image: url('~/assets/images/sections/leaving.jpg');
+		header {
+			background: none;
+		}
+
+	}
+  article {
+    overflow: visible;
+    padding: 0;
+    @include box-shadow(none);
+    .content {
+      padding: 0;
+      @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.9));
+      @include small-desktop {
+        width: 100%;
+      }
+      & + blockquote {
+        border: none;
+        background-color: $footer-bg;
+        &, & p {
+          color: $footer-font-color;
+        }
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  ul.records {
+    margin: 0;
   }
 }
 

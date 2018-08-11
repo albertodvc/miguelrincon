@@ -20,7 +20,8 @@
     "nuxt": "^1.4.0",
     "sass-loader": "^6.0.6",
     "vue-i18n": "^8.0.0",
-    "vue-markdown": "^2.2.4"
+    "vue-markdown": "^2.2.4",
+    "vue-youtube": "^1.2.5"
   },
   "scripts": {
     "dev": "nuxt",

@@ -25,6 +25,94 @@
 
 </template>
 
+<style lang="scss">
+
+@import "compass/css3";
+@import "compass/utilities";
+@import "variables";
+@import "typography";
+@import "media_queries";
+
+footer {
+
+	background-color: $footer-bg;
+	.content {
+		padding: 20px 0;
+		@include breakpoint(650px) {
+			display: table;
+			margin: 0 auto;
+		}
+	}
+	.social {
+		width: 300px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		@include breakpoint(650px) {
+			display: inline-flex;
+		}
+		a {
+			position: relative;
+			display: inline-block;
+			width: $social-button-size;
+			height: $social-button-size;
+			border-radius: 50%;
+			text-align: center;
+			margin: 0;
+			padding: $social-button-size/3;
+			box-shadow: 0px 0px 0px 50px rgba(255, 255, 255, 0);
+			@include transition(all $link-transition-duration ease-in-out);
+
+			#facebook,
+			#twitter,
+			#youtube {
+				fill: $footer-font-color;
+				@include transition(fill $link-transition-duration ease-in-out); }
+
+			&:hover {
+				box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+				@include transition(all $link-transition-duration ease-in-out);
+				background: $footer-font-color;
+				#facebook,
+				#twitter,
+				#youtube {
+					fill: $footer-bg;
+					@include transition(fill $link-transition-duration ease-in-out);
+				}
+
+			}
+		}
+	}
+	.contact-info {
+		text-align: center;
+		margin-top: 10px;
+		@include breakpoint(650px) {
+			display: inline-block;
+			padding-left: 55px;
+		}
+		.email,
+		.phone {
+			display: block;
+			margin-bottom: 5px;
+			color: $footer-font-color;
+			text-decoration: none;
+			&:visited {
+				color: $footer-font-color;
+			}
+		}
+		.phone-icon,
+		.mail-icon {
+			width: 13px;
+			height: 13px;
+			display: inline-block;
+    		vertical-align: middle;
+		}
+	}
+
+}
+
+</style>
+
 <script>
 
   import Youtube from '~/components/logos/Youtube.vue'

@@ -3,7 +3,11 @@
     <app-section v-for="section in sections"
       :key="section.key"
       :parameters="section.params"
-      :section="section.key"/>
+      :section="section.key">
+      <video-player v-if="section.video" :video="section.video">
+        <span>Miguel Rincón</span>
+      </video-player>
+    </app-section>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -16,12 +20,14 @@
   import perfoMap from '~/utils/perfoMap.js'
   import recordMap from '~/utils/recordMap.js'
   import AppSection from '~/components/AppSection.vue'
+  import VideoPlayer from '~/components/VideoPlayer.vue'
 
   const API = createClient()
 
   export default {
     components: {
-      AppSection
+      AppSection,
+      VideoPlayer
     },
     fetch({ store }) {
       store.commit('increment')
@@ -51,6 +57,10 @@
         sections: [
           {
             key: 'frontPage',
+            title: 'Miguel Rincon',
+            video: {
+              id: 'vJPVS_uZitI'
+            },
             params: {
               bio: bio.items[0].fields.text,
               quote: quotes.items.find( quote => quote.fields.section === 'Front Page').fields

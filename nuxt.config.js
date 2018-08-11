@@ -26,7 +26,10 @@ module.exports = {
   router: {
     middleware: 'i18n'
   },
-  plugins: ['~/plugins/i18n.js'],
+  plugins: [
+    '~/plugins/i18n.js',
+    '~/plugins/parallax.js'
+  ],
   generate: {
     dir: 'dist',
     routes: ['/', '/es-ES']
