@@ -8,12 +8,6 @@
 </template>
 <style lang="scss" scoped>
 
-  section {
-    > header {
-      height: 100vh;
-    }
-  }
-
 </style>
 
 <script>
