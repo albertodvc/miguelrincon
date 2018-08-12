@@ -5,7 +5,7 @@
       :parameters="section.params"
       :section="section.key">
       <video-player v-if="section.video" :video="section.video">
-        <span>Miguel Rincón</span>
+        <span class="miguel">Miguel Rincón</span>
       </video-player>
     </app-section>
   </div>
@@ -47,6 +47,7 @@
       const records = await API.getEntries({
         'content_type': 'record',
         locale: store.state.locale,
+        order: '-fields.date',
         include: 3
       })
       const quotes = await API.getEntries({

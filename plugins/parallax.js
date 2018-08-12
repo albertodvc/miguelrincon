@@ -76,7 +76,10 @@ const parallax = {
 
 const parallaxContainer = {
   bind: function(el) {
-    el.classList.add('parallax-container')
+    const touch = 'ontouchstart' in document.documentElement
+    if ( !touch && ViewPort.width() > 1024) {
+      el.classList.add('parallax-container')
+    }
   }
 }
 

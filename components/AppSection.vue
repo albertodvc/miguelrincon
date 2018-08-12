@@ -62,7 +62,9 @@ section{
 		@include breakpoint(958px) {
 			height: 500px;
 		}
-
+    @include breakpoint(1025px) {
+			height:100vh;
+		}
 		h2 {
 			text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 			text-transform: uppercase;
@@ -113,7 +115,7 @@ section{
 				top: 50%;
 				width: 960px;
 				span.miguel {
-					font-size: 137px;
+					//font-size: 137px;
 					margin-bottom: 40px;
 				}
 			}
@@ -211,9 +213,10 @@ article {
 
 
 .section {
-  &__header {
-    height: 100vh;
-  }
+
+  // &__header {
+  //   height: 100vh;
+  // }
 
   &__quote {
     color: lighten($body-text-color, 10%);

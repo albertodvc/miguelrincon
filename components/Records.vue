@@ -1,6 +1,6 @@
 <template>
   <ul class="record-list && records">
-    <li
+    <li class="record-list__record"
       v-for="record in parameters.records"
       :key="record.title">
       <record :record="record"/>
@@ -16,32 +16,17 @@
 @import "typography";
 @import "media_queries";
 
-.records {
-	$record-animation-duration: 0.3s;
-	@include clearfix;
-	background: $footer-bg;
-	h3 {
-		a{
-			text-decoration: none;
-		}
-	}
+.record-list {
+  &__record {
+    @include clearfix;
+    @include box-sizing(border-box);
+    border-top: 2px solid $footer-bg;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
 
-	.record {
-		@include clearfix;
-		@include box-sizing(border-box);
-		border-top: 2px solid $footer-bg;
-		margin: 0;
-		display: inline-block;
-		vertical-align: top;
-		width: 100%;
-		position: relative;
-		@include transition(all $record-animation-duration ease-in-out);
-		&:before {
-			content: "";
-			display: block;
-			padding-top: 87%;
-		}
-		@include breakpoint(400px) {
+    @include breakpoint(400px) {
 			width: 50%;
 			&:nth-child(odd) {
 				border-right: 2px solid $footer-bg;
@@ -70,6 +55,29 @@
 				width: 33.333333%;
 			}
 		}
+  }
+}
+
+.records {
+	$record-animation-duration: 0.3s;
+	background: $footer-bg;
+	h3 {
+		a{
+			text-decoration: none;
+		}
+	}
+
+	.record {
+		@include clearfix;
+		@include box-sizing(border-box);
+		position: relative;
+		@include transition(all $record-animation-duration ease-in-out);
+		&:before {
+			content: "";
+			display: block;
+			padding-top: 87%;
+		}
+
 		.image-container {
 			position:  absolute;
 			top: 0;
