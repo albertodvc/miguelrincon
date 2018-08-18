@@ -20,6 +20,10 @@ const parallax = {
   // directive definition
   inserted: function (el) {
     var container = findAncestor(el, 'parallax-container')
+    //Todo don't do this here
+    if (container)
+      var video = container.querySelector('.video-wrapper')
+
     if (!container) return
     var center = () => {
       var setCssProperties = (element, opacity, translate) => {
@@ -52,9 +56,10 @@ const parallax = {
           el.classList.remove('hidden')
         }
         setCssProperties(el, 1 - (scrollPosition / viewportHeight * 1.2), -scrollPosition / parallaxRatio)
-        // if ($(this).children('.video-wrapper').hasClass('active')) {
-        //   $(this).children('.video-wrapper').css(getCssProperties(1 - (scrollPosition / viewportHeight * 1.2)))
-        // }
+        //Todo don't do this here
+        if (video && video.classList.contains('active')) {
+          setCssProperties(video, 1 - (scrollPosition / viewportHeight * 1.2))
+        }
       } else {
         if (titleStyle.getPropertyValue('opacity') <= 0) {
           el.classList.add('hidden')
