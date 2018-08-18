@@ -107,6 +107,7 @@
 		}
 	}
 	.content {
+    padding-top: 40px;
 		p {
 
  			&:first-letter {
