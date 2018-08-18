@@ -3,7 +3,8 @@
     <record class="record-list__record"
       v-for="record in parameters.records"
       :key="record.title"
-      :record="record">
+      :record="record"
+      @click.native="iOSHoverWorkaround = null">
     </record>
   </ul>
 </template>
@@ -233,6 +234,11 @@
     components: {
       Record
     },
-    props: ['parameters']
+    props: ['parameters'],
+    data: function() {
+      return {
+        iOSHoverWorkaround: null
+      }
+    }
   }
 </script>
