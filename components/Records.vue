@@ -17,6 +17,7 @@
 @import "media_queries";
 
 .record-list {
+  @include clearfix;
   &__record {
     @include clearfix;
     @include box-sizing(border-box);
