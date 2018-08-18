@@ -1,3 +1,5 @@
+@import "styles/colors";
+
 $small-padding: 7%;
 $small-vertical-padding: 20px;
 $top-bar-height: 50px;
@@ -8,6 +10,6 @@ $menu-animation-time: 0.25s;
 $side-menu-width: 175px;
 
 $social-button-size: 40px;
-$footer-bg: #222222;
+$footer-bg: $alt-black;
 $footer-font-color: white;
 $link-transition-duration: 0.1s;

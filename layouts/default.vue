@@ -43,8 +43,8 @@ html {
 
 body {
 	width: 100%;
-	@extend .mid-gray-background;
-	@extend .lighter-background;
+  background: $alt-black;
+
 	@include ipad-landscape {
 		-webkit-text-size-adjust: none;
 	}
