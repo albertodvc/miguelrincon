@@ -1,10 +1,10 @@
 <template>
   <ul class="record-list && records">
-    <li class="record-list__record"
+    <record class="record-list__record"
       v-for="record in parameters.records"
-      :key="record.title">
-      <record :record="record"/>
-    </li>
+      :key="record.title"
+      :record="record">
+    </record>
   </ul>
 </template>
 

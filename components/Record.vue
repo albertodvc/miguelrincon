@@ -1,5 +1,5 @@
 <template>
-  <div class="record"
+  <li class="record"
     itemprop="album"
     itemscope
     itemtype="http://schema.org/MusicAlbum">
@@ -40,7 +40,7 @@
           </li>
         </ul>
 		</div>
-  </div>
+  </li>
 </template>
 
 <script>
