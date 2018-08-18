@@ -5,14 +5,11 @@
       :parameters="section.params"
       :section="section.key">
       <video-player v-if="section.video" :video="section.video">
-        <span class="miguel">Miguel Rincón</span>
+        <span v-if="section.title" class="miguel">{{ section.title }}</span>
       </video-player>
     </app-section>
   </div>
 </template>
-<style lang="scss" scoped>
-
-</style>
 
 <script>
 
@@ -58,7 +55,7 @@
         sections: [
           {
             key: 'frontPage',
-            title: 'Miguel Rincon',
+            title: 'Miguel Rincón',
             video: {
               id: 'vJPVS_uZitI'
             },
