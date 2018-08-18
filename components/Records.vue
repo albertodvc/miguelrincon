@@ -202,23 +202,25 @@
 			}
 
 		}
-		&:hover {
-			.record-info {
-				background-color: rgba(0,0,0,0.5);
-				.record-title,
-				.group,
-				.date {
-					@include transform(translateX(0));
-				}
-				.record-link {
-					@include transform(translateY(0));
-				}
-			}
-			img {
-				@include filter(blur(16px));
-			}
-		}
 	}
+
+  //Hover is not being fired on iOS if not defined on the li element
+  .record-list__record:hover {
+    .record-info {
+      background-color: rgba(0,0,0,0.5);
+      .record-title,
+      .group,
+      .date {
+        @include transform(translateX(0));
+      }
+      .record-link {
+        @include transform(translateY(0));
+      }
+    }
+    img {
+      @include filter(blur(16px));
+    }
+  }
 }
 
 </style>
