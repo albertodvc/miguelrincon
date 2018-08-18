@@ -107,7 +107,13 @@
 		}
 	}
 	.content {
-    padding-top: 40px;
+    @include breakpoint(420px) {
+      padding-top: 20px;
+    }
+    @include breakpoint(690px) {
+      padding-top: 40px;
+    }
+
 		p {
 
  			&:first-letter {
