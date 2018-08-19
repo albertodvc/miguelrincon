@@ -2,8 +2,10 @@
 
   <section :id="section"
     class="section"
+    :class="{'img-loaded': parameters.preloadImg && bgLoaded}"
     v-parallax-container>
-    <header class="section__header">
+    <header class="section__header"
+      :class="{'img-loaded': parameters.preloadImg && bgLoaded}">
       <slot>
         <h2 v-parallax>{{ $t('sections.'+section) }}</h2>
       </slot>
@@ -15,7 +17,10 @@
         <p>{{ parameters.quote.author }}</p>
       </blockquote>
     </article>
-
+    <img v-if="parameters.preloadImg"
+      :src="parameters.preloadImg"
+      :onload="bgLoaded = true"
+      style="display: none;"/>
   </section>
 
 </template>
@@ -32,7 +37,26 @@
       Performances,
       Records
     },
-    props: ['section', 'parameters']
+    props: ['section', 'parameters'],
+    data: function() {
+      return {
+        bgLoaded: false
+      }
+    },
+    // directives: {
+    //   preloadImg: {
+    //     bind: function (el, bind) {
+    //       var image = new Image();
+    //       console.log('loading', bind.value)
+    //       image.onload = () => {
+    //         consolo.log('loaded')
+    //         document.getElementsByTagName('header')[0].className += " img-loaded";
+    //         document.getElementsByTagName('section')[0].className += " img-loaded";
+    //       }
+    //       image.src = bind.value;
+    //     }
+    //   }
+    // },
   }
 
 </script>

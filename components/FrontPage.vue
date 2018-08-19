@@ -25,12 +25,12 @@
 	header,
 	&.parallax-container {
     overflow: hidden;
-		background-image: url('~/assets/images/sections/guitarra_1.jpg');
+		background-image: url('~/assets/images/sections/frontPageBg.jpg');
 		&:before {
 			content: "";
 			@include box-sizing(border-box);
 			display: block;
-			background: inline-image('~/assets/images/sections/guitarra_1_load.jpg');
+			background: url('~/assets/images/sections/frontPageBg_load.jpg');
 			position: absolute;
 			top: 0;
 			width: 100%;

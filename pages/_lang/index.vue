@@ -60,6 +60,7 @@
               id: 'vJPVS_uZitI'
             },
             params: {
+              preloadImg: '~/assets/images/frontPageBg.jpg',
               bio: bio.items[0].fields.text,
               quote: quotes.items.find( quote => quote.fields.section === 'Front Page').fields
             }

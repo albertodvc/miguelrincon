@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const fs = require('fs')
 
 module.exports = {
   /*
@@ -44,6 +45,7 @@ module.exports = {
     ** Run ESLint on save
     */
       extend (config, { isDev, isClient }) {
+        config.module.rules.find((rule) => rule.loader === 'url-loader').options.limit = 20000
         const vueLoader = config.module.rules.find(
           ({loader}) => loader === 'vue-loader')
         const { options: {loaders} } = vueLoader || { options: {} }
