@@ -1,6 +1,21 @@
 {
+  "meta": {
+    "title": "Miguel Rincón | Cuerda pulsada del renacimiento y barroco. Laud, guitarra, tiorba",
+    "keywords": "Miguel Rincón, laud, tiorba, guitarra, renacimiento, barroco, bach"
+  },
   "links": {
-    "english": "Version inglesa"
+    "spanish": "Spanish Version",
+    "main": "Incicio",
+    "biography": "Biografía",
+    "performances": "Actuaciones",
+    "discography": "Discografia",
+    "contact": "Contacto",
+    "presskit": "Pack de prensa"
+  },
+  "sections": {
+    "frontPage": "Miguel Rincón",
+    "performances": "Próximas actuaciones",
+    "records": "Discografía"
   },
   "dates": {
     "months": {
@@ -17,10 +32,6 @@
       "10": "noviembre",
       "11": "diciembre"
     }
-  },
-  "test": "Hola Amigos mios",
-  "index": {
-    "pilla": "por la orilla"
   }
 }
 

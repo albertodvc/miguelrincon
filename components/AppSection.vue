@@ -5,7 +5,7 @@
     v-parallax-container>
     <header class="section__header">
       <slot>
-        <h2 v-parallax>{{ section }}</h2>
+        <h2 v-parallax>{{ $t('sections.'+section) }}</h2>
       </slot>
     </header>
     <article>

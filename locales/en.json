@@ -1,6 +1,21 @@
 {
+  "meta": {
+    "title": "Miguel Rincón | Plucked strings renaissance and baroque instruments, lute, theorbe, guitar",
+    "keywords": "Miguel Rincón, lute, theorbe, guitar, renaissance, baroque, bach"
+  },
   "links": {
-    "spanish": "Spanish Version"
+    "spanish": "Spanish Version",
+    "main": "Main",
+    "biography": "Bio",
+    "performances": "Performances",
+    "discography": "Discography",
+    "contact": "Contact",
+    "presskit": "Press kit"
+  },
+  "sections": {
+    "frontPage": "Miguel Rincón",
+    "performances": "Next performances",
+    "records": "Discography"
   },
   "dates": {
     "months": {
@@ -17,9 +32,5 @@
       "10": "november",
       "11": "december"
     }
-  },
-  "test": "HEllow my darlin",
-  "index": {
-    "pilla": "by the river"
   }
 }
