@@ -24,6 +24,7 @@
 
 	header,
 	&.parallax-container {
+    overflow: hidden;
 		background-image: url('~/assets/images/sections/guitarra_1.jpg');
 		&:before {
 			content: "";
