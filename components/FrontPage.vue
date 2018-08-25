@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <vue-markdown>{{ parameters.bio }}</vue-markdown>
+    <div v-html="$md.render(parameters.bio)"></div>
   </div>
 
 </template>
@@ -143,12 +143,7 @@
 
 <script>
 
-  import VueMarkdown from 'vue-markdown'
-
   export default {
-    components: {
-      VueMarkdown
-    },
     props: ['parameters'],
   }
 

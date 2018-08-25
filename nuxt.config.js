@@ -31,6 +31,12 @@ module.exports = {
     '~/plugins/i18n.js',
     '~/plugins/parallax.js'
   ],
+  modules: [
+    '@nuxtjs/markdownit'
+  ],
+  markdownit: {
+    injected: true
+  },
   generate: {
     dir: 'dist',
     routes: ['/', '/es-ES']
