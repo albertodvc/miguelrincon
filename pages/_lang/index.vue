@@ -34,7 +34,7 @@
         'content_type': 'performance',
         locale: store.state.locale,
         order: 'fields.date',
-        // 'fields.date[gte]': new Date(),
+        'fields.date[gte]': new Date(),
         include: 3
       })
       const bio = await API.getEntries({
@@ -68,7 +68,7 @@
           {
             key: 'performances',
             params: {
-              performances: perfoes.items.map(perfoMap).slice(0, 10),
+              performances: perfoes.items.map(perfoMap),
               quote: quotes.items.find( quote => quote.fields.section === 'Performances').fields
             }
           },

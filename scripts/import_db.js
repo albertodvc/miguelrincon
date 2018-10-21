@@ -2,31 +2,44 @@
 const fs = require('fs')
 const contentful = require('contentful-management')
 
-var odb = JSON.parse(fs.readFileSync('scripts/db.json', 'utf8'))
+var odb = JSON.parse(fs.readFileSync('scripts/mysql.json', 'utf8'))
 
-var perfoes = JSON.parse(fs.readFileSync('scripts/perfoes.json', 'utf8'))
-var groups = JSON.parse(fs.readFileSync('scripts/groups.json', 'utf8'))
-var programs = JSON.parse(fs.readFileSync('scripts/programs.json', 'utf8'))
-var records = JSON.parse(fs.readFileSync('scripts/records.json', 'utf8'))
-
+var space
+const publish = true
 
 const client = contentful.createClient({
   accessToken: process.env.CTF_M_TOKEN
 })
 
-// records = linkRecords(odb.records, groups, odb.groups_records)
-// fs.writeFileSync('scripts/records.json', JSON.stringify(records, null, 2))
-
-
 client.getSpace(process.env.CTF_SPACE_ID)
-.then( space => {
+.then( _space => {
+  space = _space
+  console.log('POPULATING ...')
+  return loadDB(odb)
 
-})
-.then( result => {
-  console.log('lets write', result)
 })
 .catch( err => console.log('JORROR', err))
 
+
+function loadDB(db) {
+  return createGroups(db.groups)
+  .then( () => createPrograms(db.programs))
+  .then( () => createLocations(db.perfoes, db.locations, db.locations_perfoes))
+  .then( () => linkPerfoes(db.perfoes, db.groups, db.programs, db.groups_perfoes, db.perfoes_programs))
+  .then( () => linkRecords(db.records, db.groups, db.groups_records))
+  .then( () => createPerfoes(db.perfoes))
+  .then( () => createRecords(db.records))
+  .then( () => {
+    console.log('Everything imported')
+  })
+}
+
+function fixLocale(items){
+  if (items.length != 2) {
+    items.push(Object.assign({}, items[0], {language_id: (items[0].language_id == '1')? '2': '1' }))
+  }
+  return items
+}
 
 
 function createGroups(groups) {
@@ -42,19 +55,20 @@ function createGroups(groups) {
       }
     })
     .then((entry) => {
-      console.log('Entry created', entry.sys.id)
       group._id = entry.sys.id
+      if (publish)
+        return entry.publish()
       return group._id
     })
   }))
 }
 
-function createLocations(space, perfoes, locations, locations_perfoes) {
-  _perfoes = perfoes.map(perfo => {
-    return Object.assign({}, perfo, {
-      location: locations_perfoes
+function createLocations(perfoes, locations, locations_perfoes) {
+  perfoes.map(perfo => {
+    return Object.assign(perfo, {
+      location: fixLocale(locations_perfoes
         .filter( entry => entry.perfo_id === perfo.id)
-        .map(location => locations.find(_location => _location.id == location.location_id))
+        .map(location => locations.find(_location => _location.id == location.location_id)))
         .reduce((acc, item) => {
           ['country', 'address', 'region', 'sub_region', 'city'].reduce( (acc, attr) => {
             acc[attr] = acc[attr] || {}
@@ -66,19 +80,22 @@ function createLocations(space, perfoes, locations, locations_perfoes) {
         }, {})
       })
   })
-  return Promise.all(_perfoes.map( (perfo) => {
+
+  return Promise.all(perfoes.map( (perfo) => {
     return space.createEntry('location', {
       fields: perfo.location
     })
     .then((entry) => {
       perfo.location_id = entry.sys.id
       delete perfo.location
+      if (publish)
+        return entry.publish()
       return perfo.location_id
     })
   }))
 }
 
-function createPrograms(space, programs) {
+function createPrograms(programs) {
   return Promise.all(programs.map( program => {
     return space.createEntry('program', {
       fields: {
@@ -90,6 +107,8 @@ function createPrograms(space, programs) {
     })
     .then((entry) => {
       program._id = entry.sys.id
+      if (publish)
+        return entry.publish()
       return program._id
     })
   }))
@@ -98,7 +117,7 @@ function createPrograms(space, programs) {
 function linkPerfoes(perfoes, groups, programs, groups_perfoes, perfoes_programs) {
   return perfoes.map(perfo => {
 
-    return Object.assign({}, perfo, {
+    return Object.assign(perfo, {
       group_id: groups
         .find( group => {
           return group.id === groups_perfoes.find( entry => entry.perfo_id === perfo.id).group_id
@@ -111,7 +130,7 @@ function linkPerfoes(perfoes, groups, programs, groups_perfoes, perfoes_programs
   })
 }
 
-function createPerfoes(space, perfoes) {
+function createPerfoes(perfoes) {
   return Promise.all(perfoes.map( perfo => {
     return space.createEntry('performance', {
       fields: {
@@ -142,17 +161,17 @@ function createPerfoes(space, perfoes) {
           }
         }}
       }
+    }).then( (entry) => {
+      if (publish)
+        return entry.publish()
     })
   }))
 }
 
-function createImage(img) {
-
-}
 
 function linkRecords(records, groups, groups_records) {
   return records.map( record => {
-    return Object.assign({}, record, {
+    return Object.assign(record, {
       group_id: groups
         .find( group => {
           return group.id === groups_records.find( entry => entry.record_id === record.id).group_id
@@ -161,7 +180,7 @@ function linkRecords(records, groups, groups_records) {
   })
 }
 
-function createRecords(space, records) {
+function createRecords(records) {
   return Promise.all(records.map( (record, idx, records) => {
     return space.createUpload({
       file: fs.readFileSync('scripts/img/'+record.img),
@@ -205,7 +224,7 @@ function createRecords(space, records) {
     .then(asset => asset.processForAllLocales())
     .then(asset => asset.publish())
     .then( asset => {
-      space.createEntry('record', {
+      return space.createEntry('record', {
         fields: {
           title: {'en-US': record.title},
           subtitle: {'en-US': record.subtitle},
@@ -230,6 +249,10 @@ function createRecords(space, records) {
           }}
         }
       })
+    })
+    .then( (entry) => {
+      if (publish)
+        return entry.publish()
     })
   }))
 }

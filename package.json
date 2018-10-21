@@ -32,9 +32,12 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "test": "node test.js",
-    "schema": "node scripts/create_schema.js"
+    "clean": "node scripts/clean_space.js",
+    "preimport:db": "node scripts/bootstrap.js",
+    "import:db": "node scripts/import_db.js"
   },
   "devDependencies": {
+    "contentful-import": "^7.4.1",
     "contentful-management": "^5.2.2"
   }
 }
