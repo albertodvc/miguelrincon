@@ -1,6 +1,6 @@
 [[redirects]]
-  to = "/es-ES"
-  status = 302
-  force = false
-  conditions = {Language = ["es"]}
-
+from = "/*"
+to = "/es-ES/:splat"
+status = 302
+force = false
+conditions = {Language = "es"}
