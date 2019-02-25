@@ -3,8 +3,8 @@ const contentfulImport = require('contentful-import')
 
 const options = {
   content: data,
-  spaceId: process.env.CTF_SPACE_ID,
-  managementToken: process.env.CTF_M_TOKEN,
+  spaceId: process.env.MR_CTF_SPACE_ID,
+  managementToken: process.env.MR_CTF_M_TOKEN,
 }
 
 contentfulImport(options)

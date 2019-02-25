@@ -42,8 +42,8 @@ module.exports = {
     routes: ['/', '/es-ES']
   },
   env: {
-    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
+    MR_CTF_SPACE_ID: process.env.MR_CTF_SPACE_ID,
+    MR_CTF_CDA_ACCESS_TOKEN: process.env.MR_CTF_CDA_ACCESS_TOKEN
   },
 
   build: {
