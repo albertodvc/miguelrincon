@@ -55,7 +55,7 @@ const parallax = {
         } else {
           el.classList.remove('hidden')
         }
-        setCssProperties(el, 1 - (scrollPosition / viewportHeight * 1.2), -scrollPosition / parallaxRatio)
+        setCssProperties(el, 1 - (scrollPosition / viewportHeight * 1.2), scrollPosition / parallaxRatio)
         //Todo don't do this here
         if (video && video.classList.contains('active')) {
           setCssProperties(video, 1 - (scrollPosition / viewportHeight * 1.2))
