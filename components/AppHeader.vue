@@ -5,11 +5,11 @@
 			<toggle :expanded="navExpanded"/>
 		</div>
     <ul class="navigation" :class="{'is-open': navExpanded}" id="navigator">
-      <li class="nav-item" ><a class="nav__link" href="#frontPage"><span>Front Page</span></a></li>
-      <li class="nav-item" ><a class="nav__link" href="#performances"><span>Perfo</span></a></li>
-      <li class="nav-item" ><a class="nav__link" href="#records"><span>Records</span></a></li>
-      <li class="nav-item" ><a class="nav__link" href="#contact"><span>Contact</span></a></li>
-      <li class="nav-item" ><a href="files/press_kit.zip" download="Press kit.zip" target="_blank"><span>Press Kit</span></a></li>
+      <li class="nav-item" ><a class="nav__link" href="#frontPage"><span>{{ $t('links.main') }}</span></a></li>
+      <li class="nav-item" ><a class="nav__link" href="#performances"><span>{{ $t('links.performances') }}</span></a></li>
+      <li class="nav-item" ><a class="nav__link" href="#records"><span>{{ $t('links.discography') }}</span></a></li>
+      <li class="nav-item" ><a class="nav__link" href="#contact"><span>{{ $t('links.contact') }}</span></a></li>
+      <li class="nav-item" ><a href="files/press_kit.zip" download="Press kit.zip" target="_blank"><span>{{ $t('links.presskit') }}</span></a></li>
     </ul>
   </nav>
 </template>
