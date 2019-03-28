@@ -9,7 +9,7 @@
       <li class="nav-item" ><a class="nav__link" href="#performances"><span>{{ $t('links.performances') }}</span></a></li>
       <li class="nav-item" ><a class="nav__link" href="#records"><span>{{ $t('links.discography') }}</span></a></li>
       <li class="nav-item" ><a class="nav__link" href="#contact"><span>{{ $t('links.contact') }}</span></a></li>
-      <li class="nav-item" ><a href="files/press_kit.zip" download="Press kit.zip" target="_blank"><span>{{ $t('links.presskit') }}</span></a></li>
+      <li class="nav-item" ><a href="press_kit.zip" download="Press kit.zip" target="_blank"><span>{{ $t('links.presskit') }}</span></a></li>
     </ul>
   </nav>
 </template>
