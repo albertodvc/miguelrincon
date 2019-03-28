@@ -161,6 +161,9 @@ $performance--margin: 15px;
 	color: $mid-gray;
 }
 
+.country {
+  text-transform: uppercase;
+}
 
 </style>
 
