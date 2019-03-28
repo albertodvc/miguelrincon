@@ -119,7 +119,7 @@ $performance--margin: 15px;
     }
     @include breakpoint(650px) {
     	width: 66%;
-    	padding: 5px 0 5px $performance--margin;
+    	padding: 0 0 5px $performance--margin;
     }
     .group {
     	display: block;
@@ -148,6 +148,11 @@ $performance--margin: 15px;
 .location {
 	margin-bottom: 3px;
 }
+
+.region {
+  font-weight: 200;
+}
+
 .city {
 	@extend %small-headline-text;
 	line-height: 1;
@@ -156,6 +161,12 @@ $performance--margin: 15px;
 	&:before {
 		content: " - ";
 	}
+}
+
+.place,
+.city,
+.region {
+  margin-right: 5px;
 }
 .country, .program {
 	color: $mid-gray;
