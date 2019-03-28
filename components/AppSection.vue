@@ -1,7 +1,7 @@
 <template>
 
   <section :id="section"
-    class="section"
+    class="section parallax-container"
     :class="{'img-loaded': parameters.preloadImg && bgLoaded}"
     v-parallax-container>
     <header class="section__header"
@@ -18,7 +18,7 @@
       </blockquote>
     </article>
     <img v-if="parameters.preloadImg"
-      :src="parameters.preloadImg"
+      src="~/assets/images/sections/frontPageBg.jpg"
       :onload="bgLoaded = true"
       style="display: none;"/>
   </section>
@@ -42,21 +42,7 @@
       return {
         bgLoaded: false
       }
-    },
-    // directives: {
-    //   preloadImg: {
-    //     bind: function (el, bind) {
-    //       var image = new Image();
-    //       console.log('loading', bind.value)
-    //       image.onload = () => {
-    //         consolo.log('loaded')
-    //         document.getElementsByTagName('header')[0].className += " img-loaded";
-    //         document.getElementsByTagName('section')[0].className += " img-loaded";
-    //       }
-    //       image.src = bind.value;
-    //     }
-    //   }
-    // },
+    }
   }
 
 </script>

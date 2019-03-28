@@ -35,6 +35,8 @@
 @import "colors";
 @import "typography";
 
+$performance--margin: 15px;
+
 #performances {
 
 	time {
@@ -45,7 +47,7 @@
 			vertical-align: top;
 		}
 		@include breakpoint(650px) {
-			width: 33%;
+			width: calc(33% -#{$performance--margin});
 			text-align: right;
 		}
 	}
@@ -57,16 +59,16 @@
 
 
 	font-size: 50px;
-    background: white;
-    line-height: 40px;
-    @include breakpoint(500px) {
-    	font-size: 75px;
-    	line-height: 55px;
-    }
-    @include breakpoint(600px) {
-    	font-size: 100px;
-    	line-height: 75px;
-    }
+  background: white;
+  line-height: 40px;
+  @include breakpoint(500px) {
+    font-size: 75px;
+    line-height: 55px;
+  }
+  @include breakpoint(600px) {
+    font-size: 100px;
+    line-height: 75px;
+  }
 
 }
 .year {
@@ -81,7 +83,7 @@
 	}
 	@include breakpoint(600px) {
 		font-size: 120px;
-    	line-height: 91px;
+    line-height: 91px;
 	}
 
 }
@@ -104,7 +106,7 @@
 	@include box-sizing(border-box);
 	min-height: 55px;
 	padding: 5px 0 5px $small-padding;
-	margin-left: 11 px;
+	margin-left: $performance--margin;
 	border-left: 3px solid $black;
 
 	@include breakpoint(450px) {
@@ -117,7 +119,7 @@
     }
     @include breakpoint(650px) {
     	width: 66%;
-    	padding: 5px 0 5px 15px;
+    	padding: 5px 0 5px $performance--margin;
     }
     .group {
     	display: block;

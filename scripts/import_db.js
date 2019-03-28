@@ -8,10 +8,10 @@ var space
 const publish = true
 
 const client = contentful.createClient({
-  accessToken: process.env.CTF_M_TOKEN
+  accessToken: process.env.MR_CTF_M_TOKEN
 })
 
-client.getSpace(process.env.CTF_SPACE_ID)
+client.getSpace(process.env.MR_CTF_SPACE_ID)
 .then( _space => {
   space = _space
   console.log('POPULATING ...')
@@ -251,8 +251,10 @@ function createRecords(records) {
       })
     })
     .then( (entry) => {
+      console.log( 'uploaded', record)
       if (publish)
         return entry.publish()
     })
+    .catch( (err) => console.log('error', err, record.img))
   }))
 }

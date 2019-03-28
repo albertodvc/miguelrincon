@@ -3,8 +3,7 @@
   <div class="perfo">
     <time itemprop="startDate" :datetime="perfo.date">
       <h5 class="$$ day">{{ day }}</h5>
-    </time>
-    <div class="$$ performance-info">
+    </time><div class="$$ performance-info">
       <div class="$$ location"
         itemprop="location" itemscope itemtype="http://schema.org/Place">
         <!-- <meta itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">

@@ -1,10 +1,10 @@
 const contentful = require('contentful-management')
 
 const client = contentful.createClient({
-  accessToken: process.env.CTF_M_TOKEN
+  accessToken: process.env.MR_CTF_M_TOKEN
 })
 
-client.getSpace(process.env.CTF_SPACE_ID)
+client.getSpace(process.env.MR_CTF_SPACE_ID)
 .then((space) => space.getEntries({'limit': 1000}))
 .then( (response) => response.items )
 .then((items) => Promise.all(items.map( (item) => {
