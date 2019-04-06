@@ -44,7 +44,7 @@
       const records = await API.getEntries({
         'content_type': 'record',
         locale: store.state.locale,
-        order: '-fields.date',
+        order: '-fields.weight',
         include: 3
       })
       const quotes = await API.getEntries({
@@ -68,7 +68,7 @@
           {
             key: 'performances',
             params: {
-              performances: perfoes.items.map(perfoMap),
+              performances: perfoes.items.slice(Math.max(perfoes.items.length - 30, 1)).map(perfoMap),
               quote: quotes.items.find( quote => quote.fields.section === 'Performances').fields
             }
           },
