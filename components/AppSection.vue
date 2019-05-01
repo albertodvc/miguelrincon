@@ -1,8 +1,8 @@
 <template>
 
   <section :id="section"
-    class="section parallax-container"
-    :class="{'img-loaded': parameters.preloadImg && bgLoaded}"
+    class="section"
+    :class="{'img-loaded': parameters.preloadImg && bgLoaded, 'parallax-container': parallax}"
     v-parallax-container>
     <header class="section__header"
       :class="{'img-loaded': parameters.preloadImg && bgLoaded}">
@@ -40,7 +40,8 @@
     props: ['section', 'parameters'],
     data: function() {
       return {
-        bgLoaded: false
+        bgLoaded: false,
+        parallax: !process.browser || !('ontouchstart' in document.documentElement) && (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth)
       }
     }
   }
