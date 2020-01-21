@@ -68,7 +68,7 @@
           {
             key: 'performances',
             params: {
-              performances: perfoes.items.slice(Math.max(perfoes.items.length - 30, 1)).map(perfoMap),
+              performances: perfoes.items.map(perfoMap),
               quote: quotes.items.find( quote => quote.fields.section === 'Performances').fields
             }
           },
