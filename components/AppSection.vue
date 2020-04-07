@@ -256,10 +256,10 @@ article {
 
 #performances {
 	header {
-		background-image: url('~/assets/images/sections/migue_new_1.jpg');
+		background-image: url('~/assets/images/sections/river.jpg');
 	}
 	&.parallax-container {
-		background-image: url('~/assets/images/sections/migue_new_1.jpg');
+		background-image: url('~/assets/images/sections/river.jpg');
 		header {
 			background: none;
 		}
@@ -269,10 +269,10 @@ article {
 
 #records {
 	header {
-		background-image: url('~/assets/images/sections/leaving.jpg');
+		background-image: url('~/assets/images/sections/courtain.jpg');
 	}
 	&.parallax-container {
-		background-image: url('~/assets/images/sections/leaving.jpg');
+		background-image: url('~/assets/images/sections/courtain.jpg');
 		header {
 			background: none;
 		}
