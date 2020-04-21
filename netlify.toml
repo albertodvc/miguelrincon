@@ -1,0 +1,8 @@
+[context.deploy-preview]
+  command = "npm run generate:noindex"
+
+[context.branch-deploy]
+  command = "npm run generate:noindex"
+
+[dev]
+  command = "npm run dev"

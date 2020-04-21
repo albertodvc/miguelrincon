@@ -15,10 +15,10 @@
           <img svg-inline class="phone-icon" src="./icons/phone.svg" />
           +0041 786 479 018
         </span>
-        <a class="email" id="xmail" onmouseover="mrincon_mail('m');" onfocus="mrincon_mail('m');" href="#">
+        <MailTo>
           <img svg-inline class="mail-icon" src="./icons/mail.svg" />
-          @Contact Legend
-        </a>
+          {{ $t('sections.footer.mail') }}
+        </MailTo>
       </div>
     </div>
   </footer>
@@ -118,13 +118,14 @@ footer {
   import Youtube from '~/components/logos/Youtube.vue'
   import Facebook from '~/components/logos/Facebook.vue'
   import Twitter from '~/components/logos/Twitter.vue'
-
+  import MailTo from '~/components/MailTo'
 
   export default {
     components: {
       Youtube,
       Facebook,
-      Twitter
+      Twitter,
+      MailTo
     },
     data: function() {
       return {
