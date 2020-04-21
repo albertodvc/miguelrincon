@@ -15,7 +15,10 @@
   "sections": {
     "frontPage": "Miguel Rincón",
     "performances": "Next performances",
-    "records": "Discography"
+    "records": "Discography",
+    "footer": {
+      "mail": "Send me an email"
+    }
   },
   "dates": {
     "months": {
