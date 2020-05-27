@@ -136,11 +136,11 @@ footer {
           },
           {
             key: 'facebook',
-            url: 'https://www.facebook.com/miguelrincon1979'
+            url: 'https://www.facebook.com/Migueliuto'
           },
           {
             key: 'twitter',
-            url: 'https://www.facebook.com/miguelrincon1979'
+            url: 'https://twitter.com/Migueliuto79'
           }
         ]
       }
