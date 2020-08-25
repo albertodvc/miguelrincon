@@ -6,3 +6,10 @@
 
 [dev]
   command = "npm run dev"
+
+[[redirects]]
+  from = "/"
+  to = "/es-ES/"
+  status = 302
+  force = true
+  conditions = {Language = ["es"]}
