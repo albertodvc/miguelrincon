@@ -11,9 +11,12 @@
           </a>
       </div>
       <div class="contact-info">
+        <span class="management">
+          Matt Roggo | RG Management
+        </span>
         <span class="phone">
           <img svg-inline class="phone-icon" src="./icons/phone.svg" />
-          +0041 786 479 018
+          +0041 79 259 41 46
         </span>
         <MailTo>
           <img svg-inline class="mail-icon" src="./icons/mail.svg" />
@@ -91,7 +94,8 @@ footer {
 			padding-left: 55px;
 		}
 		.email,
-		.phone {
+		.phone,
+    .management {
 			display: block;
 			margin-bottom: 5px;
 			color: $footer-font-color;
