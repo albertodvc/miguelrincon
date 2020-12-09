@@ -51,6 +51,12 @@
         'content_type': 'quote',
         locale: store.state.locale,
       })
+      try {
+        store.commit('SET_PRESSKIT', (await API.getAssets({'fields.title': 'Press kit'})).items[0].fields.file.url)
+      } catch(err) {
+        console.error('cannot fetch preskit link', err)
+      }
+
       return {
         sections: [
           {
@@ -79,7 +85,7 @@
               quote: quotes.items.find( quote => quote.fields.section === 'Records').fields
             }
           }
-        ]
+        ],
       }
     },
     head () {
