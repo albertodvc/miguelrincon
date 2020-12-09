@@ -17,7 +17,10 @@
     "performances": "Próximas actuaciones",
     "records": "Discografía",
     "footer": {
-      "mail": "Contacta por correo"
+      "mail": "Contacta por correo",
+      "i18n": {
+        "en-US": "English version"
+      }
     }
   },
   "dates": {
