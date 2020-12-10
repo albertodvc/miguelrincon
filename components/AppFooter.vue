@@ -23,6 +23,13 @@
           {{ $t('sections.footer.mail') }}
         </MailTo>
       </div>
+      <div class="i18n">
+        <a v-for="lang in otherLangs"
+          :key="lang"
+          :href="`/${lang}`">
+          <img :src="require(`~/assets/images/flags/${lang}.svg`)" :title="$t(`sections.footer.i18n.${lang}`)"/>
+        </a>
+      </div>
     </div>
   </footer>
 
@@ -112,7 +119,25 @@ footer {
     		vertical-align: middle;
 		}
 	}
+  .i18n {
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    a {
+      display: inline-block;
+      width: 32px;
+      transform: scale(1);
+      transition: transform $link-transition-duration ease-in-out;
 
+      img {
+        width: 100%;;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
 }
 
 </style>
@@ -146,7 +171,13 @@ footer {
             key: 'twitter',
             url: 'https://twitter.com/Migueliuto79'
           }
-        ]
+        ],
+        langs: ['en-US', 'es-ES']
+      }
+    },
+    computed: {
+      otherLangs() {
+        return this.langs.filter(lang => lang !== this.$store.state.locale)
       }
     }
   }

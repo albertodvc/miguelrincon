@@ -39,7 +39,7 @@ module.exports = {
   },
   generate: {
     dir: 'dist',
-    routes: ['/', '/es-ES']
+    routes: ['/', 'en-US', '/es-ES']
   },
   env: {
     MR_CTF_SPACE_ID: process.env.MR_CTF_SPACE_ID,
